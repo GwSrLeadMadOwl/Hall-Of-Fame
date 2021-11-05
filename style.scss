@@ -21,27 +21,34 @@ html{
 body{
     font-family: Merriweather Sans;
     #background-imgs{
+        max-height: 1836px;
         img{
             margin: 0;
             position: absolute;
-            top: 0;
+            // top: 0;
             width: 100vw;
             z-index: -2;
+            &.bg_1{
+                top: 0;
+            }
             &.bg_2{
                 // width: 1400px;
                 // height: 1175px;
                 left: 0px;
-                top: 551px;
+                // top: 551px;
+                bottom: -756px;
             }
-            &.ch_1{
-                width: 411.98px;
-                height: 478px;
+            &.ch_1_left{
+                // width: 411.98px;
+                width: 29.4%;
+                // height: 478px;
                 left: 26px;
                 top: 391px;
             }
-            &.ch_2{
-                width: 431.22px;
-                height: 481px;
+            &.ch_2_right{
+                // width: 431.22px;
+                width: 30.8%;
+                // height: 481px;
                 // left: 940.14px;
                 right: 28.64px;
                 top: 360px;
@@ -143,15 +150,17 @@ body{
                 }
             }
         }
+
         .great-winners{
             margin: 0 auto 21.54px auto;
-            width: 660.68px;
+            // width: 660.68px;
+            width: 47.19%;
             height: 376.52px;
             // background-color: #FCC211;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .silver, .bronze{
+            .silver, .bronze{ //create variable
                 height: 342.46px;
                 background: linear-gradient(#30214300 20%, #D9D0E4 100%);
                 background-size: 97% 50%;
@@ -207,6 +216,7 @@ body{
                 }
             }
         }
+
         .top-winners{
             width: 100%;
             display: flex;
@@ -238,15 +248,20 @@ body{
                 color: #FCC211;
                 // color: #f1dea3;
             }
+            .bg_fire{
+                width: 59.16%;
+            }
             table{
                 margin-bottom: 27.27px;
-                width: 828.29px;
+                // width: 828.29px;
+                width: 59.16%;
                 height: 392.74px;
+                // height: 39.33%;
                 // background-color: #FFFFFF;
                 border-radius: 10px;
                 border-collapse: collapse;
                 overflow: hidden;
-                transform: translateY(-29px);
+                transform: translateY(-40px);
                 tr{
                     // padding-bottom: 1px;
                     &:hover{
@@ -322,17 +337,17 @@ body{
     }
 }
 
-@keyframes breathe{
-    0%{
-        background: linear-gradient(#30214300 20%, #D9D0E4 100%);
-    }
-    50%{
-        background: linear-gradient(#30214300 20%, #D9D0E4 75%);
-    }
-    100%{
-        background: linear-gradient(#30214300 20%, #D9D0E4 100%);
-    }
-}
+// @keyframes breathe{
+//     0%{
+//         background: linear-gradient(#30214300 20%, #D9D0E4 100%);
+//     }
+//     50%{
+//         background: linear-gradient(#30214300 20%, #D9D0E4 75%);
+//     }
+//     100%{
+//         background: linear-gradient(#30214300 20%, #D9D0E4 100%);
+//     }
+// }
 
 //TABLET
 @media screen and (min-width: 64em){
