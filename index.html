@@ -10,16 +10,19 @@
 </head>
 
 <body>
+    <!-- FIRE PARTICLE SYSTEM -->
     <div id="particles-js"></div>
 
+    <!-- BACKGROUND IMAGE -->
     <div id="background-imgs">
-        <img class="bg_2" src="./img/bg/02_TrollsBridge2_Background 1.png" alt="" srcset="">
-        <img class="bg_1" src="./img/bg/02_TrollsBridge2_Background.png" alt="" srcset="">
-        <img class="ch_1_left" src="./img/bg/03_TrollsBridge2_Character.png" alt="" srcset="">
-        <img class="ch_2_right" src="./img/bg/01_TrollsBridge2_Character 1.png" alt="" srcset="">
+        <img class="bg_2" src="./img/bg/02_TrollsBridge2_Background 1.png" alt="">
+        <img class="bg_1" src="./img/bg/02_TrollsBridge2_Background.png" alt="">
+        <img class="ch_1_left" src="./img/bg/03_TrollsBridge2_Character.png" alt="">
+        <img class="ch_2_right" src="./img/bg/01_TrollsBridge2_Character 1.png" alt="">
     </div>
 
-    <div id="main">
+    <main id="main">
+        <!-- INTRODUCTION TEXT -->
         <div class="intro">
             <h2 class="hero-text">HALL OF FAME</h2>
             <p>Have you ever dreamed of taking part in a tournament? Galloping on a horse while holding a spear and
@@ -27,53 +30,106 @@
             <button type="submit">Join now</button>
         </div>
 
+        <!-- THREE MAIN CARDS -->
         <div class="great-winners">
 
-            <div class="silver">
+            <div class="pedestal silver">
+
                 <div class="great-icon">
-                    <img class="img1" src="./img/great-icons/second/silver.svg" alt="" srcset="">
-                    <img class="img2" src="./img/great-icons/second/silver1.svg" alt="" srcset="">
+                    <img class="img1" src="./img/great-icons/second/silver.svg" alt="">
+                    <img class="img2" src="./img/great-icons/second/silver1.svg" alt="">
                     <img class="avatar" src="./img/avatars/image 1923.png" alt="">
-                    <object class="winner-place" data="./img/great-icons/second/Vector_59.svg"
+                    <object class="number_bg" data="./img/great-icons/second/Vector 59.svg"
                         type="image/svg+xml"></object>
-                    <object class="number" data="./img/great-icons/second/two.svg" type="image/svg+xml"></object>
+                    <object class="number" data="./img/great-icons/second/2.svg" type="image/svg+xml"></object>
                 </div>
-                <object class="winner-data" data="./img/great-icons/second/Rectangle 311.svg"
-                    type="image/svg+xml"></object>
+
+                <div class="winner-data">
+                    <object class="" data="./img/great-icons/second/Rectangle 311.svg" type="image/svg+xml"></object>
+
+                    <div id="user_name" class="winner_name silver">AP184***</div>
+
+                    <div class="results">
+                        <div class="bet">
+                            <h3>BET</h3>
+                            <h3 id="iser_bet">€61</h3>
+                        </div>
+                        <div class="win">
+                            <h3>WIN</h3>
+                            <h3 id="user_wins">€1852</h3>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="gold">
+            <div class="pedestal gold">
+
                 <div class="great-icon">
-                    <img class="img1" src="./img/great-icons/first/silver.svg" alt="" srcset="">
-                    <img class="img2" src="./img/great-icons/first/silver1.svg" alt="" srcset="">
-                    <img class="avatar" src="./img/avatars/image 1921.png" alt="">
-                    <object class="winner-place" data="./img/great-icons/first/Vector_59.svg"
-                        type="image/svg+xml"></object>
+                    <img class="crown" src="./img/great-icons/first/crown.svg" alt="crown">
+                    <img class="shield" src="./img/great-icons/first/bg_shield.svg" alt="shield">
+                    <img class="wings" src="./img/great-icons/first/wings.svg" alt="wings">
+                    <img class="avatar" src="./img/avatars/image 1921.png" alt="avatar">
+                    <object class="number_bg" data="./img/great-icons/first/bg_place.svg" type="image/svg+xml"></object>
                     <object class="number" data="./img/great-icons/first/1.svg" type="image/svg+xml"></object>
                 </div>
-                <object class="winner-data" data="./img/great-icons/first/Rectangle 311.svg"
-                    type="image/svg+xml"></object>
+
+                <div class="winner-data">
+                    <object class="" data="./img/great-icons/first/Rectangle 311.svg" type="image/svg+xml">
+                    </object>
+
+                    <div id="user_name" class="winner_name gold">Kate***</div>
+
+                    <div class="results">
+                        <div class="bet">
+                            <h3>BET</h3>
+                            <h3 id="iser_bet">€521</h3>
+                        </div>
+                        <div class="win">
+                            <h3>WIN</h3>
+                            <h3 id="user_wins">€9852</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="bronze">
+            <div class="pedestal bronze">
+
                 <div class="great-icon">
-                    <img class="img1" src="./img/great-icons/third/bronze.svg" alt="" srcset="">
-                    <img class="img2" src="./img/great-icons/third/bronze1.svg" alt="" srcset="">
+                    <img class="img1" src="./img/great-icons/third/bronze.svg" alt="">
+                    <img class="img2" src="./img/great-icons/third/bronze1.svg" alt="">
                     <img class="avatar" src="./img/avatars/image 1922.png" alt="">
-                    <object class="winner-place" data="./img/great-icons/third/Vector 58.svg"
+                    <object class="number_bg" data="./img/great-icons/third/Vector 58.svg"
                         type="image/svg+xml"></object>
                     <object class="number" data="./img/great-icons/third/3.svg" type="image/svg+xml"></object>
                 </div>
-                <object class="winner-data" data="./img/great-icons/third/Rectangle 311.svg"
-                    type="image/svg+xml"></object>
+
+                <div class="winner-data">
+                    <object class="" data="./img/great-icons/third/Rectangle 311.svg" type="image/svg+xml"></object>
+
+                    <div id="user_name" class="winner_name bronze">Lig***</div>
+
+                    <div class="results">
+                        <div class="bet">
+                            <h3>BET</h3>
+                            <h3 id="iser_bet">€107</h3>
+                        </div>
+                        <div class="win">
+                            <h3>WIN</h3>
+                            <h3 id="user_wins">€5852</h3>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
+        <!-- TABLE OF TOP WINNERS -->
         <div class="top-winners">
             <h3>TOP WINNERS</h3>
-            <img class="bg_fire" src="./img/bg/bg_fire.svg" alt="bg_fire" srcset="">
+            <img class="bg_fire" src="./img/bg/bg_fire.svg" alt="bg_fire">
             <table>
-                <tr style="background-color: #FFFFFF;">
+                <tr style="background-color: #FFFFFF; height: 47.42px;">
                     <th>Place</th>
                     <th>Player</th>
                     <th>Score</th>
@@ -85,7 +141,7 @@
                     <th><span class="gold">1</span></th>
                     <th id="name">Anja</th>
                     <th id="score">3.851</th>
-                    <th id="prize">10000€</th>
+                    <th id="prize">€10000</th>
                 </tr>
                 <tr style="background-color: transparent; height: 1px"></tr>
                 <tr style="background-color: #F3F3F3; cursor: pointer;"
@@ -94,7 +150,7 @@
                     <th><span class="silver">2</span></th>
                     <th id="name">Vasja</th>
                     <th id="score">3.753</th>
-                    <th id="prize">9500€</th>
+                    <th id="prize">€9500</th>
                 </tr>
                 <tr style="background-color: transparent; height: 1px"></tr>
                 <tr style="background-color: #F3F3F3; cursor: pointer;"
@@ -103,7 +159,7 @@
                     <th><span class="bronze">3</span></th>
                     <th id="name">Dima</th>
                     <th id="score">3.612</th>
-                    <th id="prize">9000€</th>
+                    <th id="prize">€9000</th>
                 </tr>
                 <tr style="background-color: transparent; height: 1px"></tr>
                 <tr style="background-color: #DCDCDC; cursor: pointer;"
@@ -112,7 +168,7 @@
                     <th>4</th>
                     <th id="name">Kolja</th>
                     <th id="score">3.121</th>
-                    <th id="prize">8000€</th>
+                    <th id="prize">€8000</th>
                 </tr>
                 <tr style="background-color: transparent; height: 1px"></tr>
                 <tr style="background-color: #DCDCDC; cursor: pointer;"
@@ -121,16 +177,17 @@
                     <th>5</th>
                     <th id="name">Pasha</th>
                     <th id="score">3.032</th>
-                    <th id="prize">7000€</th>
+                    <th id="prize">€7000</th>
                 </tr>
             </table>
             <button type="submit">Show all results</button>
         </div>
-    </div>
+        </>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-    <script src="./particles.js"></script>
+        <!-- SCRIPTS WITH PARTICLE SYSTEM -->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+        <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+        <script src="./particles.js"></script>
 
 </body>
 

@@ -26,7 +26,8 @@ body{
             margin: 0;
             position: absolute;
             // top: 0;
-            width: 100vw;
+            // width: 100vw;
+            width: 100%;
             z-index: -2;
             &.bg_1{
                 top: 0;
@@ -146,7 +147,18 @@ body{
                 box-shadow: 0 0 0 0 rgba(#eb9109, .5), inset 0 0 0 rgba(#eb9109, .5);
                 transform: scale(1);
                 &:hover{
-                    animation: pulse 1.5s infinite;
+                    animation: pulse 1s infinite;
+                    &::before{
+                        content: url("./img/bg_buttons/Rectangle 192@2x red.svg");
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: -1;
+                        // &:hover{
+                            animation: pulse-shadow 1s infinite;
+                        // }
+                    }
                 }
             }
         }
@@ -156,63 +168,170 @@ body{
             // width: 660.68px;
             width: 47.19%;
             height: 376.52px;
+            // height: 26.89%;
             // background-color: #FCC211;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .silver, .bronze{ //create variable
+            .pedestal{ //create variable
                 height: 342.46px;
-                background: linear-gradient(#30214300 20%, #D9D0E4 100%);
-                background-size: 97% 50%;
-                background-position: 20% -5%;
-                background-repeat: no-repeat;
-                animation: breathe 1.5s infinite;
+                // height: 24.46%;
+                // animation: breathe 1.5s infinite;
+                &.gold{
+                    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 100%);
+                    background-position: 50% -5%;
+                    background-size: 98% 73%;
+                    background-repeat: no-repeat;
+
+                    /* box-shadow */
+                    filter: drop-shadow(0px 5px 15px rgba(76, 62, 102, 0.15)); //???
+                    border-radius: 5px;
+
+                    &::after{
+                        background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 80%);
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: -1;
+                        background-position: 50% -5%;
+                        background-size: 98% 73%;
+                        background-repeat: no-repeat;
+                        animation: breathe 1s ease-in-out infinite alternate-reverse;
+                    }
+                }
+                &.silver{
+                    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 100%);
+                    background-position: 90% -5%;
+                    background-size: 97% 73%;
+                    background-repeat: no-repeat;
+
+                    /* box-shadow */
+                    filter: drop-shadow(0px 5px 15px rgba(76, 62, 102, 0.15)); //???
+                    border-radius: 5px;
+
+                    &::after{
+                        background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 80%);
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: -1;
+                        background-position: 50% -5%;
+                        background-size: 98% 73%;
+                        background-repeat: no-repeat;
+                        animation: breathe 1s ease-in-out infinite alternate-reverse;
+                    }
+                }
+                &.bronze{
+                    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 100%);
+                    background-position: 10% -5%;
+                    background-size: 97% 73%;
+                    background-repeat: no-repeat;
+
+                    /* box-shadow */
+                    filter: drop-shadow(0px 5px 15px rgba(76, 62, 102, 0.15)); //???
+                    border-radius: 5px;
+
+                    &::after{
+                        background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 80%);
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: -1;
+                        background-position: 50% -5%;
+                        background-size: 98% 73%;
+                        background-repeat: no-repeat;
+                        animation: breathe 1s ease-in-out infinite alternate-reverse;
+                    }
+                }
                 .great-icon{
                     position: relative;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    transform: translateY(120px);
                     img{
                         position: absolute;
-                        &.img2{
+                        &.crown{
+                            transform: translateY(-120px);
+                        }
+                        &.shield{
                         transform: translateY(-11px);
+                        }
+                        &.wings{
+                            transform: translateY(-5px);
                         }
                         &.avatar{
 
                         }
-                        
                     }
                     object{
-                        &.winner-place, &.number{
+                        &.number_bg, &.number{
                             position: absolute;
-                            // width: 39.49px;
-                            // height: 48.5px;
-                            // background-image: url("./img/great-icons/second/Vector 59.svg");
-                            // background-size: 100% 100%;
-                            // background-repeat: no-repeat;
                             transform: translateY(70px);
-                            z-index: 100;
-                            // .number{
-                            //     background-image: url("./img/great-icons/second/3.svg");
-                            // background-size: 100% 100%;
-                            // background-repeat: no-repeat;
-                            // }
+                            height: 50px;
+                            // z-index: 100;
                         }
                     }
                 }
                 .winner-data{
                     width: 184.07px;
                     height: 113.72px;
-                    transform: translateY(150px);
-                    // left: 552.23px;
-                    // top: 632.53px;
+                    transform: translateY(230px);
+                    // color: #eb9109;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: center;
+                    object{
+                        position: absolute;
+                        z-index: -1;
+                        // left: 0;
+                    }
+                    .winner_name{
+                        height: 29.73px;
+                        width: 104.53px;
+                        text-align: center;
+                        font-size: 14px;
+                        &.silver{
+                            background-color: #C7C7C7;
+                        }
+                        &.gold{
+                            background-color: #FCC211;
 
-                    // /* bg */
-                    // background: #05071A;
-                    // border: 1px solid #C7C7C7;
-                    // box-sizing: border-box;
-                    // border-radius: 10px;
-                    // transform: matrix(-1, 0.03, 0.03, 1, 0, 0);
+                        }
+                        &.bronze{
+                            background-color: #BE8D69;
+                        }
+                        border-radius: 10px;
+                        // width: 50%;
+                        transform: translateY(-12px);
+                    }
+                    .results{
+                        width: 90%;
+                        .bet{
+                            color: #FFFAF3;
+                            display: flex;
+                            justify-content: space-around;
+                            margin-bottom: 15px;
+                        }
+                        .win{
+                            color:#FCC211;
+                            display: flex;
+                            justify-content: space-around;
+                        }
+                    }
                 }
             }
         }
@@ -224,12 +343,6 @@ body{
             align-items: center;
             flex-direction: column;
             h3{
-                // position: absolute;
-                // height: 50px;
-                // left: 21.13%;
-                // right: 21.73%;
-                // top: 126.11px;
-                // margin: 126.11px 0 12.08px;
 
                 /* h2-desktop-cartoon */
                 font-family: BadaBoom;
@@ -238,9 +351,6 @@ body{
                 font-size: 35px;
                 line-height: 100%;
                 /* or 70px */
-                // display: flex;
-                // align-items: center;
-                // text-align: center;
                 letter-spacing: 0.06em;
                 text-transform: uppercase;
 
@@ -255,7 +365,7 @@ body{
                 margin-bottom: 27.27px;
                 // width: 828.29px;
                 width: 59.16%;
-                height: 392.74px;
+                // height: 392.74px;
                 // height: 39.33%;
                 // background-color: #FFFFFF;
                 border-radius: 10px;
@@ -263,36 +373,38 @@ body{
                 overflow: hidden;
                 transform: translateY(-40px);
                 tr{
-                    // padding-bottom: 1px;
+                    height: 45px;
                     &:hover{
                         background-color: #FCC211;
                     }
                     th{
-                        height: 38px;
+                        padding: 5px 0;
+                        font-weight: lighter;
                         span{
                             // height: 100px;
                             display: inline-block;
                             background-size: contain;
                             background-repeat: no-repeat;
-                            line-height:25px;
+                            line-height:38px;
+                            
                             // background-position-y: -10px;
                             &.gold{
                                 background-image: url(./img/icons/gold.svg);
-                                height: 24.35px;
-                                width: 24.35px;
+                                // height: 24.35px;
+                                height: 35px;
+                                width: 35px;
                             }
                             &.silver{
                                 background-image: url(./img/icons/silver.svg);
-                                height: 24.35px;
-                                width: 24.35px;
+                                height: 35px;
+                                width: 35px;
                             }
                             &.bronze{
                                 background-image: url(./img/icons/bronze.svg);
-                                height: 24.35px;
-                                width: 24.35px;
+                                height: 35px;
+                                width: 35px;
                             }
                         }
-                        
                     }
                 }
             }
@@ -315,7 +427,18 @@ body{
                 box-shadow: 0 0 0 0 rgba(#eb9109, .5), inset 0 0 0 rgba(#eb9109, .5);
                 transform: scale(1);
                 &:hover{
-                    animation: pulse 1.5s infinite;
+                    animation: pulse 1s infinite;
+                    &::before{
+                        content: url("./img/bg_buttons/Rectangle 192@2x.svg");
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: -1;
+                        // &:hover{
+                            animation: pulse-shadow 1s infinite;
+                        // }
+                    }
                 }
             }
         }
@@ -323,17 +446,41 @@ body{
 }
 
 //ANIMATIONS
-@keyframes pulse {
-    25% {
+@keyframes pulse{
+    0% {
+        transform: scale(1);
+    }
+    50%{
         transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse-shadow {
+    0% {
+        transform: scale(1, 1);
+        opacity: 0;
     }
     50% {
         // transform: scale(1);
-        box-shadow: 0 0 0 50px rgba(#eb9109, 0), inset 0 0 500px rgba(#eb9109, 0);
+        // box-shadow: 0 0 0 5px rgba(#eb9109, 0), inset 0 0 50px rgba(#eb9109, 0);
+        opacity: 0.5;
     }
-      100% {
-       transform:scale(.8);
-        box-shadow: 0 0 0 0 rgba(#eb9109, 0), inset 0 0 0 rgba(#eb9109, 0);
+    100% {
+       transform:scale(1.1, 1.5);
+       opacity: 0;
+        // box-shadow: 0 0 0 0 rgba(#eb9109, 0), inset 0 0 0 rgba(#eb9109, 0);
+    }
+}
+
+@keyframes breathe{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
