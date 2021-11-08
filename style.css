@@ -21,31 +21,31 @@ html {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  cursor: default;
+  font-family: Merriweather Sans;
 }
 
 body {
-  font-family: Merriweather Sans;
-  /* ---- particles.js container ---- */
-}
-
-body #background-imgs {
-  max-height: 1836px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 body #background-imgs img {
-  margin: 0;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   z-index: -2;
 }
 
 body #background-imgs img.bg_1 {
   top: 0;
+  left: 0;
+  right: 0;
 }
 
 body #background-imgs img.bg_2 {
-  left: 0px;
-  bottom: -756px;
+  bottom: -63vh;
+  left: 0;
+  right: 0;
 }
 
 body #background-imgs img.ch_1_left {
@@ -70,7 +70,6 @@ body #particles-js {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -80,36 +79,28 @@ body #main {
 }
 
 body #main .intro {
-  text-align: center;
   width: 50ch;
   margin: 0 auto;
 }
 
 body #main .intro h2.hero-text {
   margin: 126.11px 0 12.08px;
-  /* h2-desktop-cartoon */
   font-family: BadaBoom;
   font-style: normal;
   font-weight: normal;
   font-size: 70px;
   line-height: 100%;
-  /* or 70px */
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  /* yellow */
   color: #FCC211;
 }
 
 body #main .intro p {
-  margin-bottom: 15.16px;
-  /* h2-desktop-subtext */
-  font-family: Merriweather Sans;
+  margin-bottom: 25.16px;
   font-style: normal;
-  font-weight: normal;
+  font-weight: lighter;
   font-size: 18px;
   line-height: 150%;
-  /* or 27px */
-  /* white */
   color: #FFFFFF;
 }
 
@@ -118,7 +109,6 @@ body #main .intro button {
   width: 244px;
   height: 50px;
   color: #FFFFFF;
-  font-family: Merriweather Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -129,9 +119,7 @@ body #main .intro button {
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  z-index: 100;
-  -webkit-box-shadow: 0 0 0 0 rgba(235, 145, 9, 0.5), inset 0 0 0 rgba(235, 145, 9, 0.5);
-          box-shadow: 0 0 0 0 rgba(235, 145, 9, 0.5), inset 0 0 0 rgba(235, 145, 9, 0.5);
+  z-index: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -144,18 +132,23 @@ body #main .intro button:hover {
 body #main .intro button:hover::before {
   content: url("./img/bg_buttons/Rectangle 192@2x red.svg");
   position: absolute;
+  width: 244px;
+  height: 50px;
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   z-index: -1;
   -webkit-animation: pulse-shadow 1s infinite;
           animation: pulse-shadow 1s infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 body #main .great-winners {
-  margin: 0 auto 21.54px auto;
+  margin: 0 auto 30px auto;
   width: 47.19%;
-  height: 376.52px;
+  height: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,27 +158,42 @@ body #main .great-winners {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 body #main .great-winners .pedestal {
-  height: 342.46px;
+  position: relative;
+  height: 100%;
+  width: 26.86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 body #main .great-winners .pedestal.gold {
+  width: 28.86%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(255, 184, 74, 0.5)));
   background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 100%);
-  background-position: 50% -5%;
-  background-size: 98% 73%;
+  background-position: 0% 43%;
+  background-size: 99% 50%;
   background-repeat: no-repeat;
   /* box-shadow */
-  -webkit-filter: drop-shadow(0px 5px 15px rgba(76, 62, 102, 0.15));
-          filter: drop-shadow(0px 5px 15px rgba(76, 62, 102, 0.15));
   border-radius: 5px;
 }
 
 body #main .great-winners .pedestal.gold::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(80%, rgba(255, 184, 74, 0.5)));
-  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 80%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(255, 184, 74, 0.5)));
+  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 90%);
+  border-radius: 5px;
   content: "";
   width: 100%;
   height: 100%;
@@ -194,27 +202,27 @@ body #main .great-winners .pedestal.gold::after {
   left: 0;
   right: 0;
   z-index: -1;
-  background-position: 50% -5%;
-  background-size: 98% 73%;
+  background-position: 0% 43%;
+  background-size: 99% 50%;
   background-repeat: no-repeat;
   animation: breathe 1s ease-in-out infinite alternate-reverse;
 }
 
 body #main .great-winners .pedestal.silver {
+  width: 28.86%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(217, 208, 228, 0.4)));
   background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 100%);
-  background-position: 90% -5%;
-  background-size: 97% 73%;
+  background-position: 0% 43%;
+  background-size: 99% 50%;
   background-repeat: no-repeat;
   /* box-shadow */
-  -webkit-filter: drop-shadow(0px 5px 15px rgba(76, 62, 102, 0.15));
-          filter: drop-shadow(0px 5px 15px rgba(76, 62, 102, 0.15));
   border-radius: 5px;
 }
 
 body #main .great-winners .pedestal.silver::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(80%, rgba(217, 208, 228, 0.4)));
-  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 80%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(217, 208, 228, 0.4)));
+  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 90%);
+  border-radius: 5px;
   content: "";
   width: 100%;
   height: 100%;
@@ -223,27 +231,27 @@ body #main .great-winners .pedestal.silver::after {
   left: 0;
   right: 0;
   z-index: -1;
-  background-position: 50% -5%;
-  background-size: 98% 73%;
+  background-position: 0% 43%;
+  background-size: 99% 50%;
   background-repeat: no-repeat;
   animation: breathe 1s ease-in-out infinite alternate-reverse;
 }
 
 body #main .great-winners .pedestal.bronze {
+  width: 28.86%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(238, 202, 148, 0.4)));
   background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 100%);
-  background-position: 10% -5%;
-  background-size: 97% 73%;
+  background-position: 0% 43%;
+  background-size: 99% 50%;
   background-repeat: no-repeat;
   /* box-shadow */
-  -webkit-filter: drop-shadow(0px 5px 15px rgba(76, 62, 102, 0.15));
-          filter: drop-shadow(0px 5px 15px rgba(76, 62, 102, 0.15));
   border-radius: 5px;
 }
 
 body #main .great-winners .pedestal.bronze::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(80%, rgba(238, 202, 148, 0.4)));
-  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 80%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(238, 202, 148, 0.4)));
+  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 90%);
+  border-radius: 5px;
   content: "";
   width: 100%;
   height: 100%;
@@ -252,13 +260,15 @@ body #main .great-winners .pedestal.bronze::after {
   left: 0;
   right: 0;
   z-index: -1;
-  background-position: 50% -5%;
-  background-size: 98% 73%;
+  background-position: 0% 43%;
+  background-size: 99% 50%;
   background-repeat: no-repeat;
   animation: breathe 1s ease-in-out infinite alternate-reverse;
 }
 
 body #main .great-winners .pedestal .great-icon {
+  height: 45.75%;
+  width: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,8 +279,12 @@ body #main .great-winners .pedestal .great-icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translateY(120px);
-          transform: translateY(120px);
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 body #main .great-winners .pedestal .great-icon img {
@@ -278,32 +292,79 @@ body #main .great-winners .pedestal .great-icon img {
 }
 
 body #main .great-winners .pedestal .great-icon img.crown {
-  -webkit-transform: translateY(-120px);
-          transform: translateY(-120px);
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+  height: 35%;
+  width: 35%;
+}
+
+body #main .great-winners .pedestal .great-icon img.crown.silver {
+  -webkit-transform: translateY(-131px);
+          transform: translateY(-131px);
+}
+
+body #main .great-winners .pedestal .great-icon img.crown.bronze {
+  height: 32%;
+  width: 32%;
+  -webkit-transform: translateY(-133px);
+          transform: translateY(-133px);
 }
 
 body #main .great-winners .pedestal .great-icon img.shield {
-  -webkit-transform: translateY(-11px);
-          transform: translateY(-11px);
+  height: 88%;
+  width: 88%;
 }
 
 body #main .great-winners .pedestal .great-icon img.wings {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  height: 90%;
+  width: 90%;
 }
 
-body #main .great-winners .pedestal .great-icon object.number_bg, body #main .great-winners .pedestal .great-icon object.number {
+body #main .great-winners .pedestal .great-icon img.wings.silver {
+  -webkit-transform: translate(3px, -1px);
+          transform: translate(3px, -1px);
+  width: 95%;
+}
+
+body #main .great-winners .pedestal .great-icon img.wings.bronze {
+  -webkit-transform: translateX(-2px);
+          transform: translateX(-2px);
+  width: 91%;
+}
+
+body #main .great-winners .pedestal .great-icon img.avatar {
+  width: 43%;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+body #main .great-winners .pedestal .great-icon object {
   position: absolute;
-  -webkit-transform: translateY(70px);
-          transform: translateY(70px);
-  height: 50px;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+body #main .great-winners .pedestal .great-icon object.number_bg {
+  height: 35%;
+  width: 23%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body #main .great-winners .pedestal .great-icon object.number {
+  height: 18%;
+}
+
+body #main .great-winners .pedestal:hover .great-icon {
+  -webkit-transform: translateY(35px) scale(1.1);
+          transform: translateY(35px) scale(1.1);
 }
 
 body #main .great-winners .pedestal .winner-data {
-  width: 184.07px;
-  height: 113.72px;
-  -webkit-transform: translateY(230px);
-          transform: translateY(230px);
+  width: 100%;
+  height: 123.72px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,17 +378,21 @@ body #main .great-winners .pedestal .winner-data {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 body #main .great-winners .pedestal .winner-data object {
   position: absolute;
-  z-index: -1;
+  width: 100%;
+  cursor: pointer;
 }
 
 body #main .great-winners .pedestal .winner-data .winner_name {
   height: 29.73px;
   width: 104.53px;
-  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   font-size: 14px;
   border-radius: 10px;
   -webkit-transform: translateY(-12px);
@@ -348,6 +413,8 @@ body #main .great-winners .pedestal .winner-data .winner_name.bronze {
 
 body #main .great-winners .pedestal .winner-data .results {
   width: 90%;
+  z-index: 1;
+  font-size: 21px;
 }
 
 body #main .great-winners .pedestal .winner-data .results .bet {
@@ -357,7 +424,7 @@ body #main .great-winners .pedestal .winner-data .results .bet {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 body #main .great-winners .pedestal .winner-data .results .win {
@@ -387,16 +454,13 @@ body #main .top-winners {
 }
 
 body #main .top-winners h3 {
-  /* h2-desktop-cartoon */
   font-family: BadaBoom;
   font-style: normal;
   font-weight: normal;
-  font-size: 35px;
+  font-size: 50px;
   line-height: 100%;
-  /* or 70px */
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  /* yellow */
   color: #FCC211;
 }
 
@@ -418,35 +482,82 @@ body #main .top-winners table tr {
   height: 45px;
 }
 
-body #main .top-winners table tr:hover {
-  background-color: #FCC211;
+body #main .top-winners table tr.table_header {
+  height: 47.42px;
+  background-color: #FFFFFF;
 }
 
-body #main .top-winners table tr th {
-  padding: 5px 0;
+body #main .top-winners table tr.table_top {
+  background-color: #F3F3F3;
+}
+
+body #main .top-winners table tr.table_rest {
+  background-color: #DCDCDC;
+}
+
+body #main .top-winners table tr.table_top, body #main .top-winners table tr.table_rest {
   font-weight: lighter;
 }
 
-body #main .top-winners table tr th span {
+body #main .top-winners table tr.table_top:hover, body #main .top-winners table tr.table_rest:hover {
+  background-color: #f1dea3;
+  cursor: pointer;
+}
+
+body #main .top-winners table tr.table_line {
+  background-color: transparent;
+  height: 1px;
+}
+
+body #main .top-winners table tr th {
+  font-weight: normal;
+}
+
+body #main .top-winners table tr td {
+  font-weight: lighter;
+}
+
+body #main .top-winners table tr th, body #main .top-winners table tr td {
+  padding: 5px 0;
+}
+
+body #main .top-winners table tr th.1col, body #main .top-winners table tr td.1col {
+  width: 100px;
+  text-align: left;
+}
+
+body #main .top-winners table tr th.2col, body #main .top-winners table tr td.2col {
+  text-align: left;
+}
+
+body #main .top-winners table tr th.3col, body #main .top-winners table tr td.3col {
+  text-align: right;
+}
+
+body #main .top-winners table tr th.4col, body #main .top-winners table tr td.4col {
+  text-align: right;
+}
+
+body #main .top-winners table tr th span, body #main .top-winners table tr td span {
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
   line-height: 38px;
 }
 
-body #main .top-winners table tr th span.gold {
+body #main .top-winners table tr th span.gold, body #main .top-winners table tr td span.gold {
   background-image: url(./img/icons/gold.svg);
   height: 35px;
   width: 35px;
 }
 
-body #main .top-winners table tr th span.silver {
+body #main .top-winners table tr th span.silver, body #main .top-winners table tr td span.silver {
   background-image: url(./img/icons/silver.svg);
   height: 35px;
   width: 35px;
 }
 
-body #main .top-winners table tr th span.bronze {
+body #main .top-winners table tr th span.bronze, body #main .top-winners table tr td span.bronze {
   background-image: url(./img/icons/bronze.svg);
   height: 35px;
   width: 35px;
@@ -456,7 +567,6 @@ body #main .top-winners button {
   width: 274px;
   height: 51px;
   color: #05071A;
-  font-family: Merriweather Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -468,8 +578,6 @@ body #main .top-winners button {
   border: none;
   cursor: pointer;
   z-index: 1;
-  -webkit-box-shadow: 0 0 0 0 rgba(235, 145, 9, 0.5), inset 0 0 0 rgba(235, 145, 9, 0.5);
-          box-shadow: 0 0 0 0 rgba(235, 145, 9, 0.5), inset 0 0 0 rgba(235, 145, 9, 0.5);
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -482,12 +590,26 @@ body #main .top-winners button:hover {
 body #main .top-winners button:hover::before {
   content: url("./img/bg_buttons/Rectangle 192@2x.svg");
   position: absolute;
+  width: 274px;
+  height: 51px;
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   z-index: -1;
   -webkit-animation: pulse-shadow 1s infinite;
           animation: pulse-shadow 1s infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+body footer {
+  position: absolute;
+  width: 100vw;
+  bottom: -62vh;
+  text-align: center;
+  color: #FCC211;
+  font-weight: lighter;
 }
 
 @-webkit-keyframes pulse {
@@ -567,6 +689,456 @@ body #main .top-winners button:hover::before {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/*RESPONSIVENESS------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 40em) {
+  body #background-imgs img {
+    position: absolute;
+    width: 100vw;
+    z-index: -2;
+  }
+  body #background-imgs img.bg_1 {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  body #background-imgs img.bg_2 {
+    left: 0;
+    right: 0;
+    bottom: -100vh;
+  }
+  body #background-imgs img.ch_1_left {
+    width: 29.4%;
+    left: 26px;
+    top: 15vh;
+  }
+  body #background-imgs img.ch_2_right {
+    width: 30.8%;
+    right: 28.64px;
+    top: 15vh;
+  }
+  body #main {
+    text-align: center;
+  }
+  body #main .intro {
+    width: 25ch;
+  }
+  body #main .intro h2.hero-text {
+    margin: 29vh auto 10px;
+    font-family: BadaBoom;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FCC211;
+  }
+  body #main .intro p {
+    margin-bottom: 35px;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 25px;
+    color: #FFFFFF;
+  }
+  body #main .great-winners {
+    margin: 0 auto 10px auto;
+    width: 90%;
+    height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  body #main .great-winners .pedestal {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  body #main .great-winners .pedestal.gold {
+    width: 28.86%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(255, 184, 74, 0.5)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 100%);
+    background-position: 0% 43%;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    /* box-shadow */
+    border-radius: 5px;
+  }
+  body #main .great-winners .pedestal.gold::after {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(255, 184, 74, 0.5)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 90%);
+    border-radius: 5px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: 0% 43%;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    animation: breathe 1s ease-in-out infinite alternate-reverse;
+  }
+  body #main .great-winners .pedestal.silver {
+    width: 28.86%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(217, 208, 228, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 100%);
+    background-position: 0% 43%;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    /* box-shadow */
+    border-radius: 5px;
+  }
+  body #main .great-winners .pedestal.silver::after {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(217, 208, 228, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 90%);
+    border-radius: 5px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: 0% 43%;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    animation: breathe 1s ease-in-out infinite alternate-reverse;
+  }
+  body #main .great-winners .pedestal.bronze {
+    width: 28.86%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(238, 202, 148, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 100%);
+    background-position: 0% 43%;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    /* box-shadow */
+    border-radius: 5px;
+  }
+  body #main .great-winners .pedestal.bronze::after {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(238, 202, 148, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 90%);
+    border-radius: 5px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: 0% 43%;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    animation: breathe 1s ease-in-out infinite alternate-reverse;
+  }
+  body #main .great-winners .pedestal .great-icon {
+    height: 45.75%;
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+  body #main .great-winners .pedestal .great-icon img {
+    position: absolute;
+  }
+  body #main .great-winners .pedestal .great-icon img.crown {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+    height: 35%;
+    width: 35%;
+  }
+  body #main .great-winners .pedestal .great-icon img.crown.silver {
+    -webkit-transform: translateY(-131px);
+            transform: translateY(-131px);
+  }
+  body #main .great-winners .pedestal .great-icon img.crown.bronze {
+    height: 32%;
+    width: 32%;
+    -webkit-transform: translateY(-133px);
+            transform: translateY(-133px);
+  }
+  body #main .great-winners .pedestal .great-icon img.shield {
+    height: 88%;
+    width: 88%;
+  }
+  body #main .great-winners .pedestal .great-icon img.wings {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    height: 90%;
+    width: 90%;
+  }
+  body #main .great-winners .pedestal .great-icon img.wings.silver {
+    -webkit-transform: translate(3px, -1px);
+            transform: translate(3px, -1px);
+    width: 95%;
+  }
+  body #main .great-winners .pedestal .great-icon img.wings.bronze {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+    width: 91%;
+  }
+  body #main .great-winners .pedestal .great-icon img.avatar {
+    width: 43%;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  body #main .great-winners .pedestal .great-icon object {
+    position: absolute;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  body #main .great-winners .pedestal .great-icon object.number_bg {
+    height: 35%;
+    width: 23%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body #main .great-winners .pedestal .great-icon object.number {
+    height: 18%;
+  }
+  body #main .great-winners .pedestal .winner-data {
+    width: 100%;
+    height: 123.72px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  body #main .great-winners .pedestal .winner-data object {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body #main .great-winners .pedestal .winner-data .winner_name {
+    height: 20%;
+    width: 70%;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    font-size: 10px;
+    border-radius: 10px;
+    -webkit-transform: translateY(-14px);
+            transform: translateY(-14px);
+  }
+  body #main .great-winners .pedestal .winner-data .winner_name.silver {
+    background-color: #C7C7C7;
+  }
+  body #main .great-winners .pedestal .winner-data .winner_name.gold {
+    background-color: #FCC211;
+  }
+  body #main .great-winners .pedestal .winner-data .winner_name.bronze {
+    background-color: #BE8D69;
+  }
+  body #main .great-winners .pedestal .winner-data .results {
+    width: 90%;
+    z-index: 1;
+    font-size: 10px;
+    margin-bottom: 100px;
+  }
+  body #main .great-winners .pedestal .winner-data .results .bet {
+    color: #FFFAF3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 5px;
+  }
+  body #main .great-winners .pedestal .winner-data .results .win {
+    color: #FCC211;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body #main .top-winners {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #main .top-winners h3 {
+    font-family: BadaBoom;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FCC211;
+  }
+  body #main .top-winners .bg_fire {
+    width: 90%;
+  }
+  body #main .top-winners table {
+    margin-bottom: 27.27px;
+    width: 90%;
+    border-radius: 10px;
+    border-collapse: collapse;
+    overflow: hidden;
+    -webkit-transform: translateY(-4.5%);
+            transform: translateY(-4.5%);
+  }
+  body #main .top-winners table tr {
+    height: 45px;
+  }
+  body #main .top-winners table tr.table_header {
+    height: 47.42px;
+    background-color: #FFFFFF;
+  }
+  body #main .top-winners table tr.table_top {
+    background-color: #F3F3F3;
+  }
+  body #main .top-winners table tr.table_rest {
+    background-color: #DCDCDC;
+  }
+  body #main .top-winners table tr.table_top:hover, body #main .top-winners table tr.table_rest:hover {
+    background-color: #f1dea3;
+    cursor: pointer;
+  }
+  body #main .top-winners table tr.table_line {
+    background-color: transparent;
+    height: 1px;
+  }
+  body #main .top-winners table tr th {
+    font-weight: bolder;
+  }
+  body #main .top-winners table tr td {
+    font-weight: lighter;
+  }
+  body #main .top-winners table tr th, body #main .top-winners table tr td {
+    padding: 5px 0;
+  }
+  body #main .top-winners table tr th.1col, body #main .top-winners table tr td.1col {
+    width: 100px;
+    text-align: left;
+  }
+  body #main .top-winners table tr th.2col, body #main .top-winners table tr td.2col {
+    text-align: left;
+  }
+  body #main .top-winners table tr th.3col, body #main .top-winners table tr td.3col {
+    text-align: right;
+  }
+  body #main .top-winners table tr th.4col, body #main .top-winners table tr td.4col {
+    text-align: right;
+  }
+  body #main .top-winners table tr th span, body #main .top-winners table tr td span {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    line-height: 38px;
+  }
+  body #main .top-winners table tr th span.gold, body #main .top-winners table tr td span.gold {
+    background-image: url(./img/icons/gold.svg);
+    height: 35px;
+    width: 35px;
+  }
+  body #main .top-winners table tr th span.silver, body #main .top-winners table tr td span.silver {
+    background-image: url(./img/icons/silver.svg);
+    height: 35px;
+    width: 35px;
+  }
+  body #main .top-winners table tr th span.bronze, body #main .top-winners table tr td span.bronze {
+    background-image: url(./img/icons/bronze.svg);
+    height: 35px;
+    width: 35px;
+  }
+  body #main .top-winners button {
+    width: 274px;
+    height: 51px;
+    color: #05071A;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 140%;
+    background: none;
+    background-image: url("./img/bg_buttons/Rectangle 192@2x.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  body #main .top-winners button:hover {
+    -webkit-animation: pulse 1s infinite;
+            animation: pulse 1s infinite;
+  }
+  body #main .top-winners button:hover::before {
+    content: url("./img/bg_buttons/Rectangle 192@2x.svg");
+    position: absolute;
+    width: 274px;
+    height: 51px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    -webkit-animation: pulse-shadow 1s infinite;
+            animation: pulse-shadow 1s infinite;
+    -webkit-transform-origin: center;
+            transform-origin: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
