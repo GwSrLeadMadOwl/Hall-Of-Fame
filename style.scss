@@ -20,15 +20,13 @@ $table_rest: #DCDCDC;
 $table_line: transparent;
 $table_hover: #f1dea3;
 
-@mixin transparentBG($main, $secondary) {
+@mixin transparentBG($main, $secondary, $position) {
     width: 28.86%;
     background: $main;
-    background-position: 0% 43%;
+    // background-position: 0% 43%;
+    background-position: 0.05vw $position;
     background-size: 99% 50%;
     background-repeat: no-repeat;
-
-    /* box-shadow */
-    // filter: drop-shadow(0px 5px 15px rgba(76, 62, 102, 0.15)); //???
     border-radius: 5px;
 
     &::after{
@@ -42,7 +40,7 @@ $table_hover: #f1dea3;
         left: 0;
         right: 0;
         z-index: -1;
-        background-position: 0% 43%;
+        background-position: 0.05vw $position;
         background-size: 99% 50%;
         background-repeat: no-repeat;
         animation: breathe 1s ease-in-out infinite alternate-reverse;
@@ -78,7 +76,7 @@ $table_hover: #f1dea3;
             bottom: 0;
             z-index: -1;
             animation: pulse-shadow 1s infinite;
-            transform-origin: center;
+            transform-origin: center center;
         }
     }
 }
@@ -87,17 +85,21 @@ $table_hover: #f1dea3;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.05s ease-in-out;
+    &:focus, &:hover {
+        outline: 0 !important;
+        user-select: none !important;
+        -webkit-tap-highlight-color: transparent !important;
+    }
 }
 
 html{
     background: $dark;
-    user-select: none;
     cursor: default;
     font-family: Merriweather Sans;
 }
 
 body{
-    transition: all 0.3s ease-in-out;
     #background-imgs{
         img{
             position: absolute;
@@ -141,6 +143,7 @@ body{
         background-size: cover;
     }
 
+    //MAIN CONTENT
     #main{
         text-align: center;
         .intro{
@@ -166,7 +169,7 @@ body{
                 color: $white;
             }
             button{
-                margin-bottom: 29.22px;
+                margin-bottom: 50px;
                 @include customBtn(244px, 50px, $white, 18px, url("./img/bg_buttons/Rectangle 192@2x red.svg"));
             }
         }
@@ -178,8 +181,7 @@ body{
             // width: 660.68px;
             width: 47.19%;
             // height: 376.52px;
-            height: 550px;
-            // height: 28.12%;
+            height: 37rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -188,8 +190,6 @@ body{
             .pedestal{
                 position: relative;
                 // height: 342.46px;
-                // height: 542.46px;
-                // height: 28.12%;
                 height: 100%;
                 width: 26.86%;
                 display: flex;
@@ -197,82 +197,94 @@ body{
                 justify-content: space-around;
                 align-items: flex-end;
 
-                // LINEAR-GRADIENT BACKGROUND
+                // LINEAR-GRADIENT BACKGROUNDS
                 &.gold{
                     @include transparentBG(linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 100%),
-                    linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 90%));
+                    linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 90%), 7.4em);
                 }
                 &.silver{
                     @include transparentBG(linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 100%),
-                    linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 90%));
+                    linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 90%), 7.4em);
                 }
                 &.bronze{
                     @include transparentBG(linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 100%),
-                    linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 90%));
+                    linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 90%), 7.4em);
                 }
 
                 .great-icon{
+                    margin: 0 auto;
                     // height: 196.66px;
-                    height: 45.75%;
-                    // height: 100%;
-                    width: 100%;
+                    // height: 45.75%;
+                    height: 12.3rem;
+                    width: 80%;
+                    // width: 12.5rem;
                     position: relative;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     transform: translateY(50px);
                     transition: transform 0.3s ease-in-out;
-                    img{
-                        position: absolute;
-                        &.crown{
-                            transform: translateY(-150px);
-                            height: 35%;
-                            width: 35%;
-                            &.silver{
-                                transform: translateY(-131px);
-                            }
-                            &.bronze{
-                                height: 32%;
-                                width: 32%;
-                                transform: translateY(-133px);
-                            }
-                        }
-                        &.shield{
-                        // transform: translateY(-11px);
-                            height: 88%;
-                            width: 88%;
-                        }
-                        &.wings{
-                            transform: translateY(10px);
-                            height: 90%;
-                            width: 90%;
-                            &.silver{
-                                transform: translate(3px, -1px);
-                                width: 95%;
-                            }
-                            &.bronze{
-                                transform: translateX( -2px);
-                                width: 91%;
-                            }
-                        }
-                        &.avatar{
-                            // height: 43%;
-                            width: 43%;
-                            transform: translateY(-10px);
-                        }
-                    }
                     object{
                         position: absolute;
-                        transform: translateY(100px);
-                        &.number_bg{
-                            height: 35%;
-                            width: 23%;
-                            object-fit: cover;
+                        transform: translateY(-1.3rem);
+                        &.gold{
+                            transform: translateY(-1.7rem) scale(1.1);
                         }
-                        &.number{
-                            // height: 50px;
-                            height: 18%;
+                        // &.number_bg{
+                        //     height: 35%;
+                        //     width: 23%;
+                        //     object-fit: cover;
+                        // }
+                        // &.number{
+                        //     // height: 50px;
+                        //     height: 18%;
+                        // }
+                    }
+                    img{
+                        position: absolute;
+                        &.avatar{
+                            width: 43%;
+                            // transform: translateY(-10px);
+                            transform: translateY(-1.2rem);
+                            &.gold{
+                                width: 50%;
+                            }
                         }
+                        // &.crown{
+                        //     transform: translateY(-113px);
+                        //     // transform: translateY(-170%);
+                        //     // top: -70px;
+                        //     // top: -2.5rem;
+                        //     // bottom: 11rem;
+                        //     height: 35%;
+                        //     width: 35%;
+                        //     &.silver{
+                        //         transform: translateY(-131px);
+                        //     }
+                        //     &.bronze{
+                        //         height: 32%;
+                        //         width: 32%;
+                        //         transform: translateY(-133px);
+                        //     }
+                        // }
+                        // &.shield{
+                        // // transform: translateY(-11px);
+                        //     height: 88%;
+                        //     width: 88%;
+                        // }
+                        // &.wings{
+                        //     transform: translateY(10px);
+                        //     height: 90%;
+                        //     width: 90%;
+                        //     &.silver{
+                        //         transform: translate(3px, -1px);
+                        //         width: 95%;
+                        //     }
+                        //     &.bronze{
+                        //         transform: translateX( -2px);
+                        //         width: 91%;
+                        //     }
+                        // }
                     }
                 }
                 &:hover{
@@ -284,20 +296,16 @@ body{
                 .winner-data{
                     // width: 184.07px;
                     width: 100%;
+                    margin: 0 auto;
                     height: 123.72px;
-                    // transform: translateY(230px);
-                    // color: #eb9109;
                     display: flex;
                     flex-direction: column;
                     justify-content: start;
                     align-items: center;
                     cursor: pointer;
-
                     object{
                         position: absolute;
                         width: 100%;
-                        cursor: pointer;
-
                     }
                     .winner_name{
                         height: 29.73px;
@@ -321,12 +329,13 @@ body{
                     .results{
                         width: 90%;
                         z-index: 1;
-                        font-size: 21px;
+                        // font-size: 21px;
+                        font-size: 1.2vw;
                         .bet{
                             color: $white2;
                             display: flex;
                             justify-content: space-around;
-                            margin-bottom: 25px;
+                            margin-bottom: 1.5vw;
                         }
                         .win{
                             color:$gold;
@@ -400,40 +409,49 @@ body{
                     }
                     th, td{
                         padding: 5px 0;
-                        &.1col{
-                            width: 100px;
+                        width: 100px;
+                        overflow: hidden;
+                        &:first-child{
+                            text-align: center;
+                            // padding-left: 47.45px;
+                            padding-left: 1.5vw;
+                            span{
+                                display: inline-block;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                line-height: 38px;
+                                &.gold{
+                                    background-image: url(./img/icons/gold.svg);
+                                    // height: 24.35px;
+                                    height: 35px;
+                                    width: 35px;
+                                }
+                                &.silver{
+                                    background-image: url(./img/icons/silver.svg);
+                                    height: 35px;
+                                    width: 35px;
+                                }
+                                &.bronze{
+                                    background-image: url(./img/icons/bronze.svg);
+                                    height: 35px;
+                                    width: 35px;
+                                }
+                            }
+                        }
+                        &:nth-last-child(3){
                             text-align: left;
+                            // padding-left: 193.56px;
+                            padding-left: 10vw;
                         }
-                        &.2col{
-                            text-align: left;
-                        }
-                        &.3col{
+                        &:nth-last-child(2){
                             text-align: right;
+                            // padding-right: 122px;
+                            // padding-right: 193.56px;
+                            padding-right: 7vw;
                         }
-                        &.4col{
+                        &:last-child{
                             text-align: right;
-                        }
-                        span{
-                            display: inline-block;
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                            line-height: 38px;
-                            &.gold{
-                                background-image: url(./img/icons/gold.svg);
-                                // height: 24.35px;
-                                height: 35px;
-                                width: 35px;
-                            }
-                            &.silver{
-                                background-image: url(./img/icons/silver.svg);
-                                height: 35px;
-                                width: 35px;
-                            }
-                            &.bronze{
-                                background-image: url(./img/icons/bronze.svg);
-                                height: 35px;
-                                width: 35px;
-                            }
+                            padding-right: 3.7vw;
                         }
                     }
                 }
@@ -489,32 +507,25 @@ body{
     }
 }
 
-/*RESPONSIVENESS------------------------------------------------------------------------------------------------------------------------*/
+/*-RESPONSIVENESS-----------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
 
 //TABLET
-// @media screen and (min-width: 64em){
+@media screen and (min-width: 64em) and (orientation: portrait){
+    body{
 
-// }
+    }
+}
 
 //MOBILE
-@media screen and (max-width: 40em){
+@media screen and (max-width: 40em) and (orientation: portrait){
     body{
         #background-imgs{
             img{
-                position: absolute;
-                width: 100vw;
-                z-index: -2;
-                &.bg_1{
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                }
                 &.bg_2{
-                    // top: 0;
                     left: 0;
                     right: 0;
-                    bottom: -100vh;
+                    bottom: -180vw;
                 }
                 &.ch_1_left{
                     width: 29.4%;
@@ -552,10 +563,10 @@ body{
                     line-height: 25px;
                     color: $white;
                 }
-                // button{
-                //     margin-bottom: 29.22px;
-                //     @include customBtn(150px, 60px, $white, 16px, url("./img/bg_buttons/Rectangle 192@2x red.svg"));
-                // }
+                button{
+                    margin-bottom: 2vw;
+                    // @include customBtn(150px, 60px, $white, 16px, url("./img/bg_buttons/Rectangle 192@2x red.svg"));
+                }
             }
     
             //PEDESTAL - GOLD, SILVER, BRONZE
@@ -584,89 +595,36 @@ body{
                     justify-content: space-around;
                     align-items: flex-end;
     
-                    // LINEAR-GRADIENT BACKGROUND
-                    &.gold{
-                        @include transparentBG(linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 100%),
-                        linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 90%));
-                    }
-                    &.silver{
-                        @include transparentBG(linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 100%),
-                        linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 90%));
-                    }
-                    &.bronze{
-                        @include transparentBG(linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 100%),
-                        linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 90%));
-                    }
-    
                     .great-icon{
                         // height: 196.66px;
                         height: 45.75%;
                         // height: 100%;
-                        width: 100%;
+                        width: 90%;
                         position: relative;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         transform: translateY(50px);
                         transition: transform 0.3s ease-in-out;
-                        img{
-                            position: absolute;
-                            &.crown{
-                                transform: translateY(-150px);
-                                height: 35%;
-                                width: 35%;
-                                &.silver{
-                                    transform: translateY(-131px);
-                                }
-                                &.bronze{
-                                    height: 32%;
-                                    width: 32%;
-                                    transform: translateY(-133px);
-                                }
-                            }
-                            &.shield{
-                            // transform: translateY(-11px);
-                                height: 88%;
-                                width: 88%;
-                            }
-                            &.wings{
-                                transform: translateY(10px);
-                                height: 90%;
-                                width: 90%;
-                                &.silver{
-                                    transform: translate(3px, -1px);
-                                    width: 95%;
-                                }
-                                &.bronze{
-                                    transform: translateX( -2px);
-                                    width: 91%;
-                                }
-                            }
-                            &.avatar{
-                                // height: 43%;
-                                width: 43%;
-                                transform: translateY(-10px);
-                            }
-                        }
                         object{
                             position: absolute;
-                            transform: translateY(100px);
-                            &.number_bg{
-                                height: 35%;
-                                width: 23%;
-                                object-fit: cover;
+                            transform: translateY(-1.3rem);
+                            &.gold{
+                                transform: translateY(-1.7rem) scale(1.1);
                             }
-                            &.number{
-                                // height: 50px;
-                                height: 18%;
+                        }
+                        img{
+                            position: absolute;
+                            &.avatar{
+                                width: 43%;
+                                // transform: translateY(-10px);
+                                transform: translateY(-1.2rem);
+                                &.gold{
+                                    width: 50%;
+                                }
                             }
                         }
                     }
-                    // &:hover{
-                    //     .great-icon{
-                    //         transform: translateY(35px);
-                    //     }
-                    // }
     
                     .winner-data{
                         // width: 184.07px;
@@ -692,28 +650,19 @@ body{
                             place-items: center;
                             font-size: 10px;
                             border-radius: 10px;
-                            transform: translateY(-14px);
-                            &.silver{
-                                background-color: $silver;
-                            }
-                            &.gold{
-                                background-color: $gold;
-                            }
-                            &.bronze{
-                                background-color: $bronze;
-                            }
-                            
+                            // transform: translateY(-14px);
+                            transform: translateY(-1.5vw);
                         }
                         .results{
                             width: 90%;
                             z-index: 1;
-                            font-size: 10px;
+                            font-size: 2vw;
                             margin-bottom: 100px;
                             .bet{
                                 color: $white2;
                                 display: flex;
                                 justify-content: space-around;
-                                margin-bottom: 5px;
+                                margin-bottom: 3vw;
                             }
                             .win{
                                 color:$gold;
@@ -728,15 +677,11 @@ body{
             //TABLE
             .top-winners{
                 width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
                 h3{
                     font-family: BadaBoom;
                     font-style: normal;
                     font-weight: normal;
-                    font-size: 40px;
+                    font-size: 7vw;
                     line-height: 100%;
                     letter-spacing: 0.06em;
                     text-transform: uppercase;
@@ -747,86 +692,27 @@ body{
                 }
                 table{
                     margin-bottom: 27.27px;
-                    // width: 828.29px;
-                    width: 90%;
-                    // height: 392.74px;
-                    // height: 39.33%;
-                    border-radius: 10px;
-                    border-collapse: collapse;
-                    overflow: hidden;
                     transform: translateY(-4.5%);
+                    width: 91%;
                     tr{
-                        height: 45px;
-                        &.table_header{
-                            height: 47.42px;
-                            background-color: $white;
-                        }
-                        &.table_top{
-                            background-color: $table_top;
-                        }
-                        &.table_rest{
-                            background-color: $table_rest;
-                        }
-                        &.table_top, &.table_rest{
-                            &:hover{
-                                background-color: $table_hover;
-                                cursor: pointer;
-                            }
-                        }
-                        &.table_line{
-                            background-color: $table_line;
-                            height: 1px;
-                        }
-                        th{
-                            font-weight: bolder ;
-                        }
-                        td{
-                            font-weight: lighter;
-                        }
                         th, td{
-                            padding: 5px 0;
-                            &.1col{
-                                width: 100px;
-                                text-align: left;
+                            &:first-child{
+                                padding-left: 0;
                             }
-                            &.2col{
-                                text-align: left;
+                            &:nth-last-child(3){
+                                padding-left: 3vw;
                             }
-                            &.3col{
-                                text-align: right;
-                            }
-                            &.4col{
-                                text-align: right;
-                            }
-                            span{
-                                display: inline-block;
-                                background-size: contain;
-                                background-repeat: no-repeat;
-                                line-height: 38px;
-                                &.gold{
-                                    background-image: url(./img/icons/gold.svg);
-                                    // height: 24.35px;
-                                    height: 35px;
-                                    width: 35px;
-                                }
-                                &.silver{
-                                    background-image: url(./img/icons/silver.svg);
-                                    height: 35px;
-                                    width: 35px;
-                                }
-                                &.bronze{
-                                    background-image: url(./img/icons/bronze.svg);
-                                    height: 35px;
-                                    width: 35px;
-                                }
+                            &:nth-last-child(2){
+                                padding-right: 3vw;
                             }
                         }
                     }
                 }
-                button{
-                    @include customBtn(274px, 51px, $dark, 18px, url("./img/bg_buttons/Rectangle 192@2x.svg"));
-                }
             }
+        }
+        footer{
+            // bottom: -99vh;
+            bottom: -179vw;
         }
     }
 }

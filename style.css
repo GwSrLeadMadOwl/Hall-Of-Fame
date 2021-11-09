@@ -13,21 +13,23 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out;
+}
+
+*:focus, *:hover {
+  outline: 0 !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 html {
   background: #05071A;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   cursor: default;
   font-family: Merriweather Sans;
-}
-
-body {
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 body #background-imgs img {
@@ -105,7 +107,7 @@ body #main .intro p {
 }
 
 body #main .intro button {
-  margin-bottom: 29.22px;
+  margin-bottom: 50px;
   width: 244px;
   height: 50px;
   color: #FFFFFF;
@@ -141,14 +143,14 @@ body #main .intro button:hover::before {
   z-index: -1;
   -webkit-animation: pulse-shadow 1s infinite;
           animation: pulse-shadow 1s infinite;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 body #main .great-winners {
   margin: 0 auto 30px auto;
   width: 47.19%;
-  height: 550px;
+  height: 37rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,10 +185,9 @@ body #main .great-winners .pedestal.gold {
   width: 28.86%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(255, 184, 74, 0.5)));
   background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 100%);
-  background-position: 0% 43%;
+  background-position: 0.05vw 7.4em;
   background-size: 99% 50%;
   background-repeat: no-repeat;
-  /* box-shadow */
   border-radius: 5px;
 }
 
@@ -202,7 +203,7 @@ body #main .great-winners .pedestal.gold::after {
   left: 0;
   right: 0;
   z-index: -1;
-  background-position: 0% 43%;
+  background-position: 0.05vw 7.4em;
   background-size: 99% 50%;
   background-repeat: no-repeat;
   animation: breathe 1s ease-in-out infinite alternate-reverse;
@@ -212,10 +213,9 @@ body #main .great-winners .pedestal.silver {
   width: 28.86%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(217, 208, 228, 0.4)));
   background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 100%);
-  background-position: 0% 43%;
+  background-position: 0.05vw 7.4em;
   background-size: 99% 50%;
   background-repeat: no-repeat;
-  /* box-shadow */
   border-radius: 5px;
 }
 
@@ -231,7 +231,7 @@ body #main .great-winners .pedestal.silver::after {
   left: 0;
   right: 0;
   z-index: -1;
-  background-position: 0% 43%;
+  background-position: 0.05vw 7.4em;
   background-size: 99% 50%;
   background-repeat: no-repeat;
   animation: breathe 1s ease-in-out infinite alternate-reverse;
@@ -241,10 +241,9 @@ body #main .great-winners .pedestal.bronze {
   width: 28.86%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(238, 202, 148, 0.4)));
   background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 100%);
-  background-position: 0% 43%;
+  background-position: 0.05vw 7.4em;
   background-size: 99% 50%;
   background-repeat: no-repeat;
-  /* box-shadow */
   border-radius: 5px;
 }
 
@@ -260,15 +259,16 @@ body #main .great-winners .pedestal.bronze::after {
   left: 0;
   right: 0;
   z-index: -1;
-  background-position: 0% 43%;
+  background-position: 0.05vw 7.4em;
   background-size: 99% 50%;
   background-repeat: no-repeat;
   animation: breathe 1s ease-in-out infinite alternate-reverse;
 }
 
 body #main .great-winners .pedestal .great-icon {
-  height: 45.75%;
-  width: 100%;
+  margin: 0 auto;
+  height: 12.3rem;
+  width: 80%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,74 +287,29 @@ body #main .great-winners .pedestal .great-icon {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
+body #main .great-winners .pedestal .great-icon object {
+  position: absolute;
+  -webkit-transform: translateY(-1.3rem);
+          transform: translateY(-1.3rem);
+}
+
+body #main .great-winners .pedestal .great-icon object.gold {
+  -webkit-transform: translateY(-1.7rem) scale(1.1);
+          transform: translateY(-1.7rem) scale(1.1);
+}
+
 body #main .great-winners .pedestal .great-icon img {
   position: absolute;
 }
 
-body #main .great-winners .pedestal .great-icon img.crown {
-  -webkit-transform: translateY(-150px);
-          transform: translateY(-150px);
-  height: 35%;
-  width: 35%;
-}
-
-body #main .great-winners .pedestal .great-icon img.crown.silver {
-  -webkit-transform: translateY(-131px);
-          transform: translateY(-131px);
-}
-
-body #main .great-winners .pedestal .great-icon img.crown.bronze {
-  height: 32%;
-  width: 32%;
-  -webkit-transform: translateY(-133px);
-          transform: translateY(-133px);
-}
-
-body #main .great-winners .pedestal .great-icon img.shield {
-  height: 88%;
-  width: 88%;
-}
-
-body #main .great-winners .pedestal .great-icon img.wings {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
-  height: 90%;
-  width: 90%;
-}
-
-body #main .great-winners .pedestal .great-icon img.wings.silver {
-  -webkit-transform: translate(3px, -1px);
-          transform: translate(3px, -1px);
-  width: 95%;
-}
-
-body #main .great-winners .pedestal .great-icon img.wings.bronze {
-  -webkit-transform: translateX(-2px);
-          transform: translateX(-2px);
-  width: 91%;
-}
-
 body #main .great-winners .pedestal .great-icon img.avatar {
   width: 43%;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: translateY(-1.2rem);
+          transform: translateY(-1.2rem);
 }
 
-body #main .great-winners .pedestal .great-icon object {
-  position: absolute;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
-}
-
-body #main .great-winners .pedestal .great-icon object.number_bg {
-  height: 35%;
-  width: 23%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-body #main .great-winners .pedestal .great-icon object.number {
-  height: 18%;
+body #main .great-winners .pedestal .great-icon img.avatar.gold {
+  width: 50%;
 }
 
 body #main .great-winners .pedestal:hover .great-icon {
@@ -364,6 +319,7 @@ body #main .great-winners .pedestal:hover .great-icon {
 
 body #main .great-winners .pedestal .winner-data {
   width: 100%;
+  margin: 0 auto;
   height: 123.72px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,7 +340,6 @@ body #main .great-winners .pedestal .winner-data {
 body #main .great-winners .pedestal .winner-data object {
   position: absolute;
   width: 100%;
-  cursor: pointer;
 }
 
 body #main .great-winners .pedestal .winner-data .winner_name {
@@ -414,7 +369,7 @@ body #main .great-winners .pedestal .winner-data .winner_name.bronze {
 body #main .great-winners .pedestal .winner-data .results {
   width: 90%;
   z-index: 1;
-  font-size: 21px;
+  font-size: 1.2vw;
 }
 
 body #main .great-winners .pedestal .winner-data .results .bet {
@@ -424,7 +379,7 @@ body #main .great-winners .pedestal .winner-data .results .bet {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-bottom: 25px;
+  margin-bottom: 1.5vw;
 }
 
 body #main .great-winners .pedestal .winner-data .results .win {
@@ -519,48 +474,53 @@ body #main .top-winners table tr td {
 
 body #main .top-winners table tr th, body #main .top-winners table tr td {
   padding: 5px 0;
-}
-
-body #main .top-winners table tr th.1col, body #main .top-winners table tr td.1col {
   width: 100px;
-  text-align: left;
+  overflow: hidden;
 }
 
-body #main .top-winners table tr th.2col, body #main .top-winners table tr td.2col {
-  text-align: left;
+body #main .top-winners table tr th:first-child, body #main .top-winners table tr td:first-child {
+  text-align: center;
+  padding-left: 1.5vw;
 }
 
-body #main .top-winners table tr th.3col, body #main .top-winners table tr td.3col {
-  text-align: right;
-}
-
-body #main .top-winners table tr th.4col, body #main .top-winners table tr td.4col {
-  text-align: right;
-}
-
-body #main .top-winners table tr th span, body #main .top-winners table tr td span {
+body #main .top-winners table tr th:first-child span, body #main .top-winners table tr td:first-child span {
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
   line-height: 38px;
 }
 
-body #main .top-winners table tr th span.gold, body #main .top-winners table tr td span.gold {
+body #main .top-winners table tr th:first-child span.gold, body #main .top-winners table tr td:first-child span.gold {
   background-image: url(./img/icons/gold.svg);
   height: 35px;
   width: 35px;
 }
 
-body #main .top-winners table tr th span.silver, body #main .top-winners table tr td span.silver {
+body #main .top-winners table tr th:first-child span.silver, body #main .top-winners table tr td:first-child span.silver {
   background-image: url(./img/icons/silver.svg);
   height: 35px;
   width: 35px;
 }
 
-body #main .top-winners table tr th span.bronze, body #main .top-winners table tr td span.bronze {
+body #main .top-winners table tr th:first-child span.bronze, body #main .top-winners table tr td:first-child span.bronze {
   background-image: url(./img/icons/bronze.svg);
   height: 35px;
   width: 35px;
+}
+
+body #main .top-winners table tr th:nth-last-child(3), body #main .top-winners table tr td:nth-last-child(3) {
+  text-align: left;
+  padding-left: 10vw;
+}
+
+body #main .top-winners table tr th:nth-last-child(2), body #main .top-winners table tr td:nth-last-child(2) {
+  text-align: right;
+  padding-right: 7vw;
+}
+
+body #main .top-winners table tr th:last-child, body #main .top-winners table tr td:last-child {
+  text-align: right;
+  padding-right: 3.7vw;
 }
 
 body #main .top-winners button {
@@ -599,8 +559,8 @@ body #main .top-winners button:hover::before {
   z-index: -1;
   -webkit-animation: pulse-shadow 1s infinite;
           animation: pulse-shadow 1s infinite;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 body footer {
@@ -692,23 +652,13 @@ body footer {
   }
 }
 
-/*RESPONSIVENESS------------------------------------------------------------------------------------------------------------------------*/
+/*-RESPONSIVENESS-----------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 40em) {
-  body #background-imgs img {
-    position: absolute;
-    width: 100vw;
-    z-index: -2;
-  }
-  body #background-imgs img.bg_1 {
-    top: 0;
-    left: 0;
-    right: 0;
-  }
+@media screen and (max-width: 40em) and (orientation: portrait) {
   body #background-imgs img.bg_2 {
     left: 0;
     right: 0;
-    bottom: -100vh;
+    bottom: -180vw;
   }
   body #background-imgs img.ch_1_left {
     width: 29.4%;
@@ -745,6 +695,9 @@ body footer {
     line-height: 25px;
     color: #FFFFFF;
   }
+  body #main .intro button {
+    margin-bottom: 2vw;
+  }
   body #main .great-winners {
     margin: 0 auto 10px auto;
     width: 90%;
@@ -777,90 +730,9 @@ body footer {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  body #main .great-winners .pedestal.gold {
-    width: 28.86%;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(255, 184, 74, 0.5)));
-    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 100%);
-    background-position: 0% 43%;
-    background-size: 99% 50%;
-    background-repeat: no-repeat;
-    /* box-shadow */
-    border-radius: 5px;
-  }
-  body #main .great-winners .pedestal.gold::after {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(255, 184, 74, 0.5)));
-    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 90%);
-    border-radius: 5px;
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    background-position: 0% 43%;
-    background-size: 99% 50%;
-    background-repeat: no-repeat;
-    animation: breathe 1s ease-in-out infinite alternate-reverse;
-  }
-  body #main .great-winners .pedestal.silver {
-    width: 28.86%;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(217, 208, 228, 0.4)));
-    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 100%);
-    background-position: 0% 43%;
-    background-size: 99% 50%;
-    background-repeat: no-repeat;
-    /* box-shadow */
-    border-radius: 5px;
-  }
-  body #main .great-winners .pedestal.silver::after {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(217, 208, 228, 0.4)));
-    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 90%);
-    border-radius: 5px;
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    background-position: 0% 43%;
-    background-size: 99% 50%;
-    background-repeat: no-repeat;
-    animation: breathe 1s ease-in-out infinite alternate-reverse;
-  }
-  body #main .great-winners .pedestal.bronze {
-    width: 28.86%;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(238, 202, 148, 0.4)));
-    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 100%);
-    background-position: 0% 43%;
-    background-size: 99% 50%;
-    background-repeat: no-repeat;
-    /* box-shadow */
-    border-radius: 5px;
-  }
-  body #main .great-winners .pedestal.bronze::after {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(238, 202, 148, 0.4)));
-    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 90%);
-    border-radius: 5px;
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    background-position: 0% 43%;
-    background-size: 99% 50%;
-    background-repeat: no-repeat;
-    animation: breathe 1s ease-in-out infinite alternate-reverse;
-  }
   body #main .great-winners .pedestal .great-icon {
     height: 45.75%;
-    width: 100%;
+    width: 90%;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -878,63 +750,25 @@ body footer {
     transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
+  body #main .great-winners .pedestal .great-icon object {
+    position: absolute;
+    -webkit-transform: translateY(-1.3rem);
+            transform: translateY(-1.3rem);
+  }
+  body #main .great-winners .pedestal .great-icon object.gold {
+    -webkit-transform: translateY(-1.7rem) scale(1.1);
+            transform: translateY(-1.7rem) scale(1.1);
+  }
   body #main .great-winners .pedestal .great-icon img {
     position: absolute;
   }
-  body #main .great-winners .pedestal .great-icon img.crown {
-    -webkit-transform: translateY(-150px);
-            transform: translateY(-150px);
-    height: 35%;
-    width: 35%;
-  }
-  body #main .great-winners .pedestal .great-icon img.crown.silver {
-    -webkit-transform: translateY(-131px);
-            transform: translateY(-131px);
-  }
-  body #main .great-winners .pedestal .great-icon img.crown.bronze {
-    height: 32%;
-    width: 32%;
-    -webkit-transform: translateY(-133px);
-            transform: translateY(-133px);
-  }
-  body #main .great-winners .pedestal .great-icon img.shield {
-    height: 88%;
-    width: 88%;
-  }
-  body #main .great-winners .pedestal .great-icon img.wings {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    height: 90%;
-    width: 90%;
-  }
-  body #main .great-winners .pedestal .great-icon img.wings.silver {
-    -webkit-transform: translate(3px, -1px);
-            transform: translate(3px, -1px);
-    width: 95%;
-  }
-  body #main .great-winners .pedestal .great-icon img.wings.bronze {
-    -webkit-transform: translateX(-2px);
-            transform: translateX(-2px);
-    width: 91%;
-  }
   body #main .great-winners .pedestal .great-icon img.avatar {
     width: 43%;
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: translateY(-1.2rem);
+            transform: translateY(-1.2rem);
   }
-  body #main .great-winners .pedestal .great-icon object {
-    position: absolute;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-  body #main .great-winners .pedestal .great-icon object.number_bg {
-    height: 35%;
-    width: 23%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  body #main .great-winners .pedestal .great-icon object.number {
-    height: 18%;
+  body #main .great-winners .pedestal .great-icon img.avatar.gold {
+    width: 50%;
   }
   body #main .great-winners .pedestal .winner-data {
     width: 100%;
@@ -966,22 +800,13 @@ body footer {
     place-items: center;
     font-size: 10px;
     border-radius: 10px;
-    -webkit-transform: translateY(-14px);
-            transform: translateY(-14px);
-  }
-  body #main .great-winners .pedestal .winner-data .winner_name.silver {
-    background-color: #C7C7C7;
-  }
-  body #main .great-winners .pedestal .winner-data .winner_name.gold {
-    background-color: #FCC211;
-  }
-  body #main .great-winners .pedestal .winner-data .winner_name.bronze {
-    background-color: #BE8D69;
+    -webkit-transform: translateY(-1.5vw);
+            transform: translateY(-1.5vw);
   }
   body #main .great-winners .pedestal .winner-data .results {
     width: 90%;
     z-index: 1;
-    font-size: 10px;
+    font-size: 2vw;
     margin-bottom: 100px;
   }
   body #main .great-winners .pedestal .winner-data .results .bet {
@@ -991,7 +816,7 @@ body footer {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin-bottom: 5px;
+    margin-bottom: 3vw;
   }
   body #main .great-winners .pedestal .winner-data .results .win {
     color: #FCC211;
@@ -1003,25 +828,12 @@ body footer {
   }
   body #main .top-winners {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   body #main .top-winners h3 {
     font-family: BadaBoom;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 7vw;
     line-height: 100%;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -1032,113 +844,21 @@ body footer {
   }
   body #main .top-winners table {
     margin-bottom: 27.27px;
-    width: 90%;
-    border-radius: 10px;
-    border-collapse: collapse;
-    overflow: hidden;
     -webkit-transform: translateY(-4.5%);
             transform: translateY(-4.5%);
+    width: 91%;
   }
-  body #main .top-winners table tr {
-    height: 45px;
+  body #main .top-winners table tr th:first-child, body #main .top-winners table tr td:first-child {
+    padding-left: 0;
   }
-  body #main .top-winners table tr.table_header {
-    height: 47.42px;
-    background-color: #FFFFFF;
+  body #main .top-winners table tr th:nth-last-child(3), body #main .top-winners table tr td:nth-last-child(3) {
+    padding-left: 3vw;
   }
-  body #main .top-winners table tr.table_top {
-    background-color: #F3F3F3;
+  body #main .top-winners table tr th:nth-last-child(2), body #main .top-winners table tr td:nth-last-child(2) {
+    padding-right: 3vw;
   }
-  body #main .top-winners table tr.table_rest {
-    background-color: #DCDCDC;
-  }
-  body #main .top-winners table tr.table_top:hover, body #main .top-winners table tr.table_rest:hover {
-    background-color: #f1dea3;
-    cursor: pointer;
-  }
-  body #main .top-winners table tr.table_line {
-    background-color: transparent;
-    height: 1px;
-  }
-  body #main .top-winners table tr th {
-    font-weight: bolder;
-  }
-  body #main .top-winners table tr td {
-    font-weight: lighter;
-  }
-  body #main .top-winners table tr th, body #main .top-winners table tr td {
-    padding: 5px 0;
-  }
-  body #main .top-winners table tr th.1col, body #main .top-winners table tr td.1col {
-    width: 100px;
-    text-align: left;
-  }
-  body #main .top-winners table tr th.2col, body #main .top-winners table tr td.2col {
-    text-align: left;
-  }
-  body #main .top-winners table tr th.3col, body #main .top-winners table tr td.3col {
-    text-align: right;
-  }
-  body #main .top-winners table tr th.4col, body #main .top-winners table tr td.4col {
-    text-align: right;
-  }
-  body #main .top-winners table tr th span, body #main .top-winners table tr td span {
-    display: inline-block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    line-height: 38px;
-  }
-  body #main .top-winners table tr th span.gold, body #main .top-winners table tr td span.gold {
-    background-image: url(./img/icons/gold.svg);
-    height: 35px;
-    width: 35px;
-  }
-  body #main .top-winners table tr th span.silver, body #main .top-winners table tr td span.silver {
-    background-image: url(./img/icons/silver.svg);
-    height: 35px;
-    width: 35px;
-  }
-  body #main .top-winners table tr th span.bronze, body #main .top-winners table tr td span.bronze {
-    background-image: url(./img/icons/bronze.svg);
-    height: 35px;
-    width: 35px;
-  }
-  body #main .top-winners button {
-    width: 274px;
-    height: 51px;
-    color: #05071A;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 140%;
-    background: none;
-    background-image: url("./img/bg_buttons/Rectangle 192@2x.svg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  body #main .top-winners button:hover {
-    -webkit-animation: pulse 1s infinite;
-            animation: pulse 1s infinite;
-  }
-  body #main .top-winners button:hover::before {
-    content: url("./img/bg_buttons/Rectangle 192@2x.svg");
-    position: absolute;
-    width: 274px;
-    height: 51px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    -webkit-animation: pulse-shadow 1s infinite;
-            animation: pulse-shadow 1s infinite;
-    -webkit-transform-origin: center;
-            transform-origin: center;
+  body footer {
+    bottom: -179vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
