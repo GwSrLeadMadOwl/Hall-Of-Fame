@@ -1,0 +1,972 @@
+@font-face {
+  font-family: BadaBoom;
+  src: url(efca49c7230cbc59b55b.ttf);
+}
+
+@font-face {
+  font-family: Merriweather Sans;
+  src: url(7203825545b70d96c9d9.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out;
+}
+
+*:focus, *:hover {
+  outline: 0 !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+html {
+  background: #05071A;
+  cursor: default;
+  font-family: Merriweather Sans;
+}
+
+body #background-imgs img {
+  position: absolute;
+  width: 100vw;
+  z-index: -2;
+}
+
+body #background-imgs img.bg_1 {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+body #background-imgs img.bg_2 {
+  bottom: -63vh;
+  left: 0;
+  right: 0;
+}
+
+body #background-imgs img.ch_1_left {
+  width: 29.4%;
+  left: 26px;
+  top: 391px;
+}
+
+body #background-imgs img.ch_2_right {
+  width: 30.8%;
+  right: 28.64px;
+  top: 360px;
+}
+
+body canvas {
+  display: block;
+}
+
+body #particles-js {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body #main {
+  text-align: center;
+}
+
+body #main .intro {
+  width: 50ch;
+  margin: 0 auto;
+}
+
+body #main .intro h2.hero-text {
+  margin: 126.11px 0 12.08px;
+  font-family: BadaBoom;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 100%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FCC211;
+}
+
+body #main .intro p {
+  margin-bottom: 25.16px;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 18px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+
+body #main .intro button {
+  margin-bottom: 50px;
+  width: 244px;
+  height: 50px;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+  background: none;
+  background-image: url(966e96c46dba0e5325b4.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body #main .intro button:hover {
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+}
+
+body #main .intro button:hover::before {
+  content: url(966e96c46dba0e5325b4.svg);
+  position: absolute;
+  width: 244px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-animation: pulse-shadow 1s infinite;
+          animation: pulse-shadow 1s infinite;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+body #main .great-winners {
+  margin: 0 auto 30px auto;
+  width: 47.19%;
+  height: 37rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body #main .great-winners .pedestal {
+  position: relative;
+  height: 100%;
+  width: 26.86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body #main .great-winners .pedestal.gold {
+  width: 28.86%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(255, 184, 74, 0.5)));
+  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 100%);
+  background-position: 0.05vw 7.4em;
+  background-size: 99% 50%;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+body #main .great-winners .pedestal.gold::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(255, 184, 74, 0.5)));
+  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 90%);
+  border-radius: 5px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-position: 0.05vw 7.4em;
+  background-size: 99% 50%;
+  background-repeat: no-repeat;
+  animation: breathe 1s ease-in-out infinite alternate-reverse;
+}
+
+body #main .great-winners .pedestal.silver {
+  width: 28.86%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(217, 208, 228, 0.4)));
+  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 100%);
+  background-position: 0.05vw 7.4em;
+  background-size: 99% 50%;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+body #main .great-winners .pedestal.silver::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(217, 208, 228, 0.4)));
+  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 90%);
+  border-radius: 5px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-position: 0.05vw 7.4em;
+  background-size: 99% 50%;
+  background-repeat: no-repeat;
+  animation: breathe 1s ease-in-out infinite alternate-reverse;
+}
+
+body #main .great-winners .pedestal.bronze {
+  width: 28.86%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(238, 202, 148, 0.4)));
+  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 100%);
+  background-position: 0.05vw 7.4em;
+  background-size: 99% 50%;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+body #main .great-winners .pedestal.bronze::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(238, 202, 148, 0.4)));
+  background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 90%);
+  border-radius: 5px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-position: 0.05vw 7.4em;
+  background-size: 99% 50%;
+  background-repeat: no-repeat;
+  animation: breathe 1s ease-in-out infinite alternate-reverse;
+}
+
+body #main .great-winners .pedestal .great-icon {
+  margin: 0 auto;
+  height: 12.3rem;
+  width: 80%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+body #main .great-winners .pedestal .great-icon object {
+  position: absolute;
+  -webkit-transform: translateY(-1.3rem);
+          transform: translateY(-1.3rem);
+}
+
+body #main .great-winners .pedestal .great-icon object.gold {
+  -webkit-transform: translateY(-1.7rem) scale(1.1);
+          transform: translateY(-1.7rem) scale(1.1);
+}
+
+body #main .great-winners .pedestal .great-icon img {
+  position: absolute;
+}
+
+body #main .great-winners .pedestal .great-icon img.avatar {
+  width: 43%;
+  -webkit-transform: translateY(-1.2rem);
+          transform: translateY(-1.2rem);
+}
+
+body #main .great-winners .pedestal .great-icon img.avatar.gold {
+  width: 50%;
+}
+
+body #main .great-winners .pedestal:hover .great-icon {
+  -webkit-transform: translateY(35px) scale(1.1);
+          transform: translateY(35px) scale(1.1);
+}
+
+body #main .great-winners .pedestal .winner-data {
+  width: 100%;
+  margin: 0 auto;
+  height: 123.72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body #main .great-winners .pedestal .winner-data object {
+  position: absolute;
+  width: 100%;
+}
+
+body #main .great-winners .pedestal .winner-data .winner_name {
+  height: 29.73px;
+  width: 104.53px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  border-radius: 10px;
+  -webkit-transform: translateY(-1vh);
+          transform: translateY(-1vh);
+}
+
+body #main .great-winners .pedestal .winner-data .winner_name.silver {
+  background-color: #C7C7C7;
+}
+
+body #main .great-winners .pedestal .winner-data .winner_name.gold {
+  background-color: #FCC211;
+}
+
+body #main .great-winners .pedestal .winner-data .winner_name.bronze {
+  background-color: #BE8D69;
+}
+
+body #main .great-winners .pedestal .winner-data .results {
+  width: 90%;
+  z-index: 1;
+  font-size: 1.2vw;
+}
+
+body #main .great-winners .pedestal .winner-data .results .bet {
+  color: #FFFAF3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 1.5vw;
+}
+
+body #main .great-winners .pedestal .winner-data .results .win {
+  color: #FCC211;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body #main .top-winners {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #main .top-winners h3 {
+  font-family: BadaBoom;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FCC211;
+}
+
+body #main .top-winners .bg_fire {
+  width: 59.16%;
+}
+
+body #main .top-winners table {
+  margin-bottom: 27.27px;
+  width: 59.16%;
+  border-radius: 10px;
+  border-collapse: collapse;
+  overflow: hidden;
+  -webkit-transform: translateY(-2.1vw);
+          transform: translateY(-2.1vw);
+}
+
+body #main .top-winners table tr {
+  height: 45px;
+}
+
+body #main .top-winners table tr.table_header {
+  height: 47.42px;
+  background-color: #FFFFFF;
+}
+
+body #main .top-winners table tr.table_top {
+  background-color: #F3F3F3;
+}
+
+body #main .top-winners table tr.table_rest {
+  background-color: #DCDCDC;
+}
+
+body #main .top-winners table tr.table_top, body #main .top-winners table tr.table_rest {
+  font-weight: lighter;
+}
+
+body #main .top-winners table tr.table_top:hover, body #main .top-winners table tr.table_rest:hover {
+  background-color: #f1dea3;
+  cursor: pointer;
+}
+
+body #main .top-winners table tr.table_line {
+  background-color: transparent;
+  height: 1px;
+}
+
+body #main .top-winners table tr th {
+  font-weight: normal;
+}
+
+body #main .top-winners table tr td {
+  font-weight: lighter;
+}
+
+body #main .top-winners table tr th, body #main .top-winners table tr td {
+  padding: 5px 0;
+  width: 100px;
+  overflow: hidden;
+}
+
+body #main .top-winners table tr th:first-child, body #main .top-winners table tr td:first-child {
+  text-align: center;
+  padding-left: 1.5vw;
+}
+
+body #main .top-winners table tr th:first-child span, body #main .top-winners table tr td:first-child span {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  line-height: 38px;
+}
+
+body #main .top-winners table tr th:first-child span.gold, body #main .top-winners table tr td:first-child span.gold {
+  background-image: url(0d1b93096a4686723e8b.svg);
+  height: 35px;
+  width: 35px;
+}
+
+body #main .top-winners table tr th:first-child span.silver, body #main .top-winners table tr td:first-child span.silver {
+  background-image: url(3cd5488459efae27c6bf.svg);
+  height: 35px;
+  width: 35px;
+}
+
+body #main .top-winners table tr th:first-child span.bronze, body #main .top-winners table tr td:first-child span.bronze {
+  background-image: url(9ef612253d9f90cd8eaa.svg);
+  height: 35px;
+  width: 35px;
+}
+
+body #main .top-winners table tr th:nth-last-child(3), body #main .top-winners table tr td:nth-last-child(3) {
+  text-align: left;
+  padding-left: 10vw;
+}
+
+body #main .top-winners table tr th:nth-last-child(2), body #main .top-winners table tr td:nth-last-child(2) {
+  text-align: right;
+  padding-right: 7vw;
+}
+
+body #main .top-winners table tr th:last-child, body #main .top-winners table tr td:last-child {
+  text-align: right;
+  padding-right: 3.7vw;
+}
+
+body #main .top-winners button {
+  position: relative;
+  width: 274px;
+  height: 51px;
+  color: #05071A;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 140%;
+  background: none;
+  background-image: url(bed037f1e053a442b09e.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body #main .top-winners button:hover {
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+}
+
+body #main .top-winners button:hover::before {
+  content: url(bed037f1e053a442b09e.svg);
+  position: absolute;
+  width: 274px;
+  height: 51px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-animation: pulse-shadow 1s infinite;
+          animation: pulse-shadow 1s infinite;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+body footer p {
+  width: 100vw;
+  text-align: center;
+  color: #FCC211;
+  font-weight: lighter;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes pulse-shadow {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1.1, 1.5);
+            transform: scale(1.1, 1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-shadow {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1.1, 1.5);
+            transform: scale(1.1, 1.5);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes breathe {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: BadaBoom;
+  src: url(efca49c7230cbc59b55b.ttf);
+}
+
+@font-face {
+  font-family: Merriweather Sans;
+  src: url(7203825545b70d96c9d9.ttf);
+}
+
+@media screen and (max-width: 64em) and (orientation: portrait) {
+  body #background-imgs img.bg_2 {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body #background-imgs img.ch_1_left {
+    top: 28vh;
+  }
+  body #background-imgs img.ch_2_right {
+    top: 25vh;
+  }
+  body #main .intro button {
+    margin-bottom: 17vh;
+  }
+  body #main .great-winners {
+    margin: 0 auto;
+    width: 80%;
+    height: 600px;
+  }
+  body #main .great-winners .pedestal.gold {
+    width: 28.86%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(255, 184, 74, 0.5)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 100%);
+    background-position: 0.05vw 8.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  body #main .great-winners .pedestal.gold::after {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(255, 184, 74, 0.5)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 90%);
+    border-radius: 5px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: 0.05vw 8.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    animation: breathe 1s ease-in-out infinite alternate-reverse;
+  }
+  body #main .great-winners .pedestal.silver {
+    width: 28.86%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(217, 208, 228, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 100%);
+    background-position: 0.05vw 8.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  body #main .great-winners .pedestal.silver::after {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(217, 208, 228, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 90%);
+    border-radius: 5px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: 0.05vw 8.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    animation: breathe 1s ease-in-out infinite alternate-reverse;
+  }
+  body #main .great-winners .pedestal.bronze {
+    width: 28.86%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(238, 202, 148, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 100%);
+    background-position: 0.05vw 8.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  body #main .great-winners .pedestal.bronze::after {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(238, 202, 148, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 90%);
+    border-radius: 5px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: 0.05vw 8.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    animation: breathe 1s ease-in-out infinite alternate-reverse;
+  }
+  body #main .great-winners .pedestal .winner-data {
+    width: 100%;
+    height: 123.72px;
+  }
+  body #main .great-winners .pedestal .winner-data .winner_name {
+    height: 30%;
+    width: 50%;
+    font-size: 18px;
+    -webkit-transform: translateY(-1vw);
+            transform: translateY(-1vw);
+  }
+  body #main .great-winners .pedestal .winner-data .results {
+    width: 80%;
+    font-size: 2vw;
+    margin-bottom: 100px;
+  }
+  body #main .great-winners .pedestal .winner-data .results .bet {
+    margin-bottom: 2vw;
+  }
+  body #main .top-winners {
+    width: 100%;
+  }
+  body #main .top-winners h3 {
+    font-size: 5vw;
+  }
+  body #main .top-winners .bg_fire {
+    width: 80%;
+  }
+  body #main .top-winners table {
+    -webkit-transform: translateY(-3vw);
+            transform: translateY(-3vw);
+    width: 81%;
+  }
+  body #main .top-winners table tr th:first-child, body #main .top-winners table tr td:first-child {
+    padding-left: 0;
+  }
+  body #main .top-winners table tr th:nth-last-child(3), body #main .top-winners table tr td:nth-last-child(3) {
+    padding-left: 3vw;
+  }
+  body #main .top-winners table tr th:nth-last-child(2), body #main .top-winners table tr td:nth-last-child(2) {
+    padding-right: 3vw;
+  }
+  * {
+    pointer-events: none;
+  }
+}
+@font-face {
+  font-family: BadaBoom;
+  src: url(efca49c7230cbc59b55b.ttf);
+}
+
+@font-face {
+  font-family: Merriweather Sans;
+  src: url(7203825545b70d96c9d9.ttf);
+}
+
+@media screen and (max-width: 40em) and (orientation: portrait) {
+  body #background-imgs img.bg_2 {
+    height: 100%;
+  }
+  body #background-imgs img.ch_1_left {
+    top: 15vh;
+  }
+  body #background-imgs img.ch_2_right {
+    top: 15vh;
+  }
+  body #main .intro {
+    width: 25ch;
+  }
+  body #main .intro h2.hero-text {
+    margin: 29vh auto 10px;
+    font-size: 45px;
+  }
+  body #main .intro p {
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  body #main .intro button {
+    margin-bottom: 2vw;
+  }
+  body #main .great-winners {
+    margin: 0 auto;
+    width: 90%;
+    height: 390px;
+  }
+  body #main .great-winners .pedestal.gold {
+    width: 28.86%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(255, 184, 74, 0.5)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 100%);
+    background-position: 0.05vw 3.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  body #main .great-winners .pedestal.gold::after {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(255, 184, 74, 0.5)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(255, 184, 74, 0.5) 90%);
+    border-radius: 5px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: 0.05vw 3.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    animation: breathe 1s ease-in-out infinite alternate-reverse;
+  }
+  body #main .great-winners .pedestal.silver {
+    width: 28.86%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(217, 208, 228, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 100%);
+    background-position: 0.05vw 3.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  body #main .great-winners .pedestal.silver::after {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(217, 208, 228, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(217, 208, 228, 0.4) 90%);
+    border-radius: 5px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: 0.05vw 3.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    animation: breathe 1s ease-in-out infinite alternate-reverse;
+  }
+  body #main .great-winners .pedestal.bronze {
+    width: 28.86%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), to(rgba(238, 202, 148, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 100%);
+    background-position: 0.05vw 3.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  body #main .great-winners .pedestal.bronze::after {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 33, 67, 0)), color-stop(90%, rgba(238, 202, 148, 0.4)));
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, rgba(238, 202, 148, 0.4) 90%);
+    border-radius: 5px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-position: 0.05vw 3.5em;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    animation: breathe 1s ease-in-out infinite alternate-reverse;
+  }
+  body #main .great-winners .pedestal .great-icon {
+    height: 45.75%;
+    width: 90%;
+  }
+  body #main .great-winners .pedestal .winner-data {
+    width: 100%;
+    height: 123.72px;
+  }
+  body #main .great-winners .pedestal .winner-data .winner_name {
+    width: 70%;
+    font-size: 10px;
+    -webkit-transform: translateY(-1.5vw);
+            transform: translateY(-1.5vw);
+  }
+  body #main .great-winners .pedestal .winner-data .results {
+    width: 80%;
+    font-size: 2vw;
+    margin-bottom: 100px;
+  }
+  body #main .great-winners .pedestal .winner-data .results .bet {
+    margin-bottom: 2vw;
+  }
+  body #main .top-winners {
+    width: 100%;
+  }
+  body #main .top-winners h3 {
+    font-size: 8vw;
+  }
+  body #main .top-winners .bg_fire {
+    width: 90%;
+  }
+  body #main .top-winners table {
+    -webkit-transform: translateY(-3vw);
+            transform: translateY(-3vw);
+    width: 91%;
+  }
+  body #main .top-winners table tr th:first-child, body #main .top-winners table tr td:first-child {
+    padding-left: 0;
+  }
+  body #main .top-winners table tr th:nth-last-child(3), body #main .top-winners table tr td:nth-last-child(3) {
+    padding-left: 3vw;
+  }
+  body #main .top-winners table tr th:nth-last-child(2), body #main .top-winners table tr td:nth-last-child(2) {
+    padding-right: 3vw;
+  }
+  * {
+    pointer-events: none;
+  }
+}

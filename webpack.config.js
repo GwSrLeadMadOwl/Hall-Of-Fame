@@ -1,7 +1,11 @@
+const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const isDev = process.env.NODE_ENV === "development";
+const isProd = !isDev;
 
 module.exports = {
     mode: "development",
@@ -11,13 +15,13 @@ module.exports = {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
     },
-    // resolve: {
-    //     extensions: [".js", ".css", ".sass", ".scss", ".png", ".svg"],
-    // },
     plugins: [
         new CleanWebpackPlugin(),
         new HTMLWebpackPlugin(
             {
+                minify: {
+                    collapseWhitespace: isProd
+                },
                 template: './index.html',
             }
         ),
@@ -32,42 +36,35 @@ module.exports = {
                     to: path.resolve(__dirname, "dist/assets")
                 }
             ]
+        }),
+        new MiniCssExtractPlugin({
+            // filename: filename("css"),
+            filename: "[name].css",
         })
     ],
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-                // options: {
-                //     name: '[path][name].[ext]',
-                //     publicPath: path.resolve(__dirname, "dist/styles")
-                // },
+                // use: ['style-loader', 'css-loader'],
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    'css-loader'],
             },
             {
                 test: /\.s[ac]ss$/,
-                use: ['style-loader', "css-loader", "sass-loader"],
-                // options: {
-                //     name: '[path][name].[ext]',
-                //     publicPath: path.resolve(__dirname, "dist/styles")
-                // },
+                use: ['style-loader', "css-loader", "sass-loader"]
             },
             {
-                test: /\.(png|jpe?g|svg|gif)$/,
-                use: ["file-loader"],
-                // options: {
-                //     name: '[path][name].[ext]',
-                //     publicPath: path.resolve(__dirname, "dist/assets/img")
-                // },
+                test: /\.jpg$/,
+                use: ["file-loader"]
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 use: ["file-loader"],
-                // options: {
-                //     name: '[path][name].[ext]',
-                //     publicPath: path.resolve(__dirname, "dist/assets/fonts")
-                // },
-            },
+            }
         ]
     }
 };
