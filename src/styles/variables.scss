@@ -1,0 +1,82 @@
+@font-face {
+    font-family: BadaBoom;
+    src: url(../assets/fonts/aa_badaboom_bb.ttf) format("truetype");
+}
+@font-face {
+    font-family: Merriweather Sans;
+    src: url(../assets/fonts/MerriweatherSans-VariableFont_wght.ttf) format("truetype");
+}
+
+//COLOURS
+$white: #FFFFFF;
+$white2: #FFFAF3;
+$dark: #05071A;
+$gold: #FCC211;
+$silver: #C7C7C7;
+$bronze: #BE8D69;
+
+$table_top: #F3F3F3;
+$table_rest: #DCDCDC;
+$table_line: transparent;
+$table_hover: #f1dea3;
+
+@mixin transparentBG($main, $secondary, $position) {
+    width: 28.86%;
+    background: $main;
+    // background-position: 0% 43%;
+    background-position: 0.05vw $position;
+    background-size: 99% 50%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+
+    &::after{
+        background: $secondary;
+        border-radius: 5px;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-position: 0.05vw $position;
+        background-size: 99% 50%;
+        background-repeat: no-repeat;
+        animation: breathe 1s ease-in-out infinite alternate-reverse;
+    }
+}
+
+@mixin customBtn($width, $height, $color, $font, $svg){
+    width: $width;
+    height: $height;
+    color: $color;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $font;
+    line-height: 140%;
+    background: none;
+    background-image: $svg;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    transform: scale(1);
+    &:hover{
+        animation: pulse 1s infinite;
+        &::before{
+            content: $svg;
+            position: absolute;
+            width: $width;
+            height: $height;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            animation: pulse-shadow 1s infinite;
+            transform-origin: center center;
+        }
+    }
+}
