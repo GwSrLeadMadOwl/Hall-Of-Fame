@@ -1,11 +1,11 @@
 @font-face {
   font-family: BadaBoom;
-  src: url(../assets/fonts/aa_badaboom_bb.ttf);
+  src: url(../assets/fonts/aa_badaboom_bb.ttf) format("truetype");
 }
 
 @font-face {
   font-family: Merriweather Sans;
-  src: url(../assets/fonts/MerriweatherSans-VariableFont_wght.ttf);
+  src: url(../assets/fonts/MerriweatherSans-VariableFont_wght.ttf) format("truetype");
 }
 
 @media screen and (max-width: 40em) and (orientation: portrait) {

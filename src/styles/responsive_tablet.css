@@ -1,11 +1,11 @@
 @font-face {
   font-family: BadaBoom;
-  src: url(../assets/fonts/aa_badaboom_bb.ttf);
+  src: url(../assets/fonts/aa_badaboom_bb.ttf) format("truetype");
 }
 
 @font-face {
   font-family: Merriweather Sans;
-  src: url(../assets/fonts/MerriweatherSans-VariableFont_wght.ttf);
+  src: url(../assets/fonts/MerriweatherSans-VariableFont_wght.ttf) format("truetype");
 }
 
 @media screen and (max-width: 64em) and (orientation: portrait) {
@@ -13,6 +13,7 @@
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    bottom: -40vh;
   }
   body #background-imgs img.ch_1_left {
     top: 28vh;
@@ -148,6 +149,12 @@
   body #main .top-winners table tr th:nth-last-child(2), body #main .top-winners table tr td:nth-last-child(2) {
     padding-right: 3vw;
   }
+  * {
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 64em) and (orientation: landscape) {
   * {
     pointer-events: none;
   }

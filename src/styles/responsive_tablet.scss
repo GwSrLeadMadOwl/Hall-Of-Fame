@@ -8,8 +8,7 @@
                 &.bg_2{
                     height: 100%;
                     object-fit: cover;
-                    // bottom: -40vw;
-                    // bottom: min(-40vw, -60vw);
+                    bottom: -40vh;
                 }
                 &.ch_1_left{
                     top: 28vh;
@@ -99,6 +98,11 @@
             }
         }
     }
+    *{
+        pointer-events: none;
+    }
+}
+@media screen and (max-width: 64em) and (orientation: landscape){
     *{
         pointer-events: none;
     }

@@ -380,17 +380,9 @@ body{
             button{
                 position: relative;
                 @include customBtn(274px, 51px, $dark, 18px, url("../assets/img/bg_buttons/Rectangle 192@2x.svg"));
+                margin-bottom: 20px;
             }
         }
-    }
-    footer{
-        p{
-            width: 100vw;
-            text-align: center;
-            color:#FCC211;
-            font-weight: lighter;
-        }
-        
     }
 }
 
