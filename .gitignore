@@ -4,8 +4,17 @@ node_modules
 /.vscode
 .vscode
 
+./dist
 /dist
 dist
 
 ./.env
 .env
+
+./public
+/public
+public
+
+./.firebase
+/.firebase
+.firebase
